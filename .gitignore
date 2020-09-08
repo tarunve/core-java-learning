@@ -1,0 +1,31 @@
+# Project exclude paths
+.idea/
+core-java-learning.iml
+
+### Ignoring files for - java-basics-001-core-concepts ###
+java-basics-001-core-concepts/target
+java-basics-001-core-concepts/java-basics-001-core-concepts.iml
+
+### Ignoring files for - java-basics-002-design-patterns ###
+java-basics-002-design-patterns/target
+java-basics-002-design-patterns/java-basics-002-design-patterns.iml
+
+### Ignoring files for - java-basics-003-datastructure ###
+java-basics-003-datastructure/target
+java-basics-003-datastructure/java-basics-003-datastructure.iml
+
+### Ignoring files for - java-basics-004-junit-mockito ###
+java-basics-004-junit-mockito/target
+java-basics-004-junit-mockito/java-basics-004-junit-mockito.iml
+
+### Ignoring files for - java-basics-005-enhancements-07 ###
+java-basics-005-enhancements-07/target
+java-basics-005-enhancements-07/java-basics-005-enhancements-07.iml
+
+### Ignoring files for - java-basics-005-enhancements-08 ###
+java-basics-005-enhancements-08/target
+java-basics-005-enhancements-08/java-basics-005-enhancements-08.iml
+
+### Ignoring files for - java-basics-006-xml-parser ###
+java-basics-006-xml-parser/target
+java-basics-006-xml-parser/java-basics-006-xml-parser.iml
