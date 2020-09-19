@@ -1,4 +1,4 @@
-package complexity;
+package abdulbari.practice001.analysis;
 
 /**
  *  Types of Time Functions:

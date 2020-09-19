@@ -1,4 +1,4 @@
-package complexity;
+package abdulbari.practice001.analysis;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
