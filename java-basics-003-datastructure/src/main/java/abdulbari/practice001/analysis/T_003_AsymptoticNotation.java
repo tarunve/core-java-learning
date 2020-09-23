@@ -13,33 +13,33 @@ package abdulbari.practice001.analysis;
  *
  *  Types of Asymptotic Notation:
  *  ============================
- *  1.  Big-O Notation (?) :
+ *  1.  Big-O Notation (O) :
  *      -   Big O notation specifically describes worst case scenario. It represents the upper bound running
  *          time complexity of an algorithm.
  *      -   The function f(n) = O(g(n)) if - there exists +ve constants c and n0(n-node)
  *              such that f(n) <= c*g(n) , for all n>n0
  *      -   Example : f(n) = 2n+3
  *              for this , f(n) = O(n) , O(n^2), O(n^3) all are true but O(logn) is not true.
- *  2.  Omega Notation (?)
+ *  2.  Omega Notation
  *      -   Omega notation specifically describes best case scenario. It represents the lower bound running
  *          time complexity of an algorithm. So if we represent a complexity of an algorithm in Omega notation,
  *          it means that the algorithm cannot be completed in less time than this, it would at-least take the
  *          time represented by Omega notation or it can take more (when not in best case scenario).
- *      -   The function f(n) = ?(g(n)) if - there exists +ve constants c and n0(n-node)
+ *      -   The function f(n) = Omega(g(n)) if - there exists +ve constants c and n0(n-node)
  *              such that f(n) >= c*g(n) , for all n>n0
  *      -   Example : f(n) = 2n+3
- *              for this , f(n) = ?(n) , ?(logn) all are true but ?(n^2) is not true.
- *  3.  Theta Notation (?)
+ *              for this , f(n) = Omega(n) , Omega(logn) all are true but Omega(n^2) is not true.
+ *  3.  Theta Notation
  *      -   This notation describes both upper bound and lower bound of an algorithm so we can say that it
  *          defines exact asymptotic behaviour. In the real case scenario the algorithm not always run on
  *          best and worst cases, the average running time lies between best and worst and can be represented
  *          by the theta notation.
- *      -   The function f(n) = ?(g(n)) if - there exists +ve constants c1, c2 and n0(n-node)
+ *      -   The function f(n) = Theta(g(n)) if - there exists +ve constants c1, c2 and n0(n-node)
  *              such that c1*g(n) <= f(n) <= c2*g(n)
  *      -   Example : f(n) = 2n+3
  *              1*n <= 2n+3 <= 5*n
  *              O(n)            O(n)
- *              f(n) = ?(n) is true only.
+ *              f(n) = Theta(n) is true only.
  *
  *  ->  Don't confuse these notations with Best case or worst case. We can write any notation for
  *      best case, worst case and average case.
