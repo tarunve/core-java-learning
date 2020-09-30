@@ -17,7 +17,7 @@ package com.java.basics.designpatterns.solid;
  *		Open/Closed and Liskov Substitution Principles.
  *	->	The classical use of this principle of bean configuration in Spring framework.
  */	
-public class T_006_DepenndencyInversionPrinciple {
+public class T_006_DependencyInversionPrinciple {
 
 	/*
 	 * 	If it is asked to add DVDs to their shelves, too. We will need to create new class and modify the existing 

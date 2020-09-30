@@ -25,8 +25,8 @@ package com.java.enhancements;
  *	==================================
  *	->	Default methods enable you to add new functionality to the interfaces of your libraries and ensure binary compatibility 
  *		with code written for older versions of those interfaces.
- *	->	Static default methods: You can define static default methods in interface which will be available to all instances of 
- *								class which implement this interface. This makes it easier for you to organize helper methods 
+ *	->	Static default methods: You can define static default methods in interface which will be available to all instances of
+ *  *								class which implement this interface. This makes it easier for you to organize helper methods
  *		in your libraries; you can keep static methods specific to an interface in the same interface rather than in a separate 
  *		class. This enables you to define methods out of your class and yet share with all child classes.
  *	->	They provide you an highly desired capability of adding a capability to number of classes without even touching their 
