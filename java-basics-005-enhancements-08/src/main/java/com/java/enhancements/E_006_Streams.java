@@ -24,7 +24,7 @@ import java.util.stream.Stream;
  *		intermediate or terminal. While terminal operations return a result of a certain type, intermediate operations return the 
  *		stream itself so you can chain multiple method calls in a row.
  *	->	Streams are created on a source, e.g. a java.util.Collection like lists or sets (maps are not supported). Stream operations 
- *		can either be executed sequentially or parallel. 
+ *		can either be executed sequentially or parallel.
  *
  *	characteristics of Stream
  *	=========================
@@ -34,6 +34,26 @@ import java.util.stream.Stream;
  *	->	Can easily be outputted as arrays or lists
  *	->	Lazy access supported
  *	->	Parallelizable
+ *
+ *	Java 8 Stream Intermediate And Terminal Operations :
+ *	==================================================
+ *	-	The main difference between intermediate and terminal operations is that intermediate operations return a stream
+ *		as a result and terminal operations return non-stream values like primitive or object or collection or may not
+ *		return anything.
+ *	-	As intermediate operations return another stream as a result, they can be chained together to form a pipeline of
+ *		operations. Terminal operations can not be chained together.
+ *	-	Pipeline of operations may contain any number of intermediate operations, but there has to be only one terminal
+ *		operation, that too at the end of pipeline.
+ *	-	Intermediate operations are lazily loaded. When you call intermediate operations, they are actually not executed.
+ *		They are just stored in the memory and executed when the terminal operation is called on the stream.
+ *	-	As the names suggest, intermediate operations doesn't give end result. They just transform one stream to another
+ *		stream. On the other hand, terminal operations give end result.
+ *	-	Intermediate Operations :
+ *			map(), filter(), distinct(), sorted(), limit(), skip()
+ *	-	Terminal Operations :
+ *			forEach(), toArray(), reduce(), collect(), min(), max(), count(), anyMatch(), allMatch(), noneMatch(),
+ *			findFirst(), findAny()
+ *
  */
 public class E_006_Streams {
 
@@ -193,6 +213,8 @@ public class E_006_Streams {
 			 */
 			String firstMatchedName = memberNames.stream().filter((s) -> s.startsWith("L")).findFirst().get();
 			System.out.println(firstMatchedName);
+			//or
+			memberNames.stream().filter(s -> s.startsWith("L")).findFirst().ifPresent(System.out::println);
 
 		}
 	}
@@ -205,7 +227,7 @@ public class E_006_Streams {
 	 */
 	public static class StreamParallel {
 		public static void main(String[] args) {
-			List<Integer> list = new ArrayList<Integer>();
+			List<Integer> list = new ArrayList<>();
 			for (int i = 1; i < 10; i++) {
 				list.add(i);
 			}

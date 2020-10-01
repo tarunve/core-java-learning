@@ -26,6 +26,8 @@ public class E_006_StreamsFilterReduce {
 			}
 		};
 		System.out.println(values.stream().filter(p).reduce(0, (c, e) -> c + e));
+		//or
+		System.out.println(values.stream().filter(p).reduce(0, Integer::sum));
 
 		//Stream api examples
 		System.out.println(values.stream().filter(i -> i % 5 == 0).map(i -> i * 2).findFirst().orElse(0));

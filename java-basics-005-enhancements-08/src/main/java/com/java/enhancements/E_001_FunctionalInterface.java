@@ -26,7 +26,7 @@ package com.java.enhancements;
  *	->	Default methods enable you to add new functionality to the interfaces of your libraries and ensure binary compatibility 
  *		with code written for older versions of those interfaces.
  *	->	Static default methods: You can define static default methods in interface which will be available to all instances of
- *  *								class which implement this interface. This makes it easier for you to organize helper methods
+ * 								class which implement this interface. This makes it easier for you to organize helper methods
  *		in your libraries; you can keep static methods specific to an interface in the same interface rather than in a separate 
  *		class. This enables you to define methods out of your class and yet share with all child classes.
  *	->	They provide you an highly desired capability of adding a capability to number of classes without even touching their 
@@ -41,6 +41,18 @@ package com.java.enhancements;
  *		classes will back fire for sure and will not be accepted at all.
  *	->	Default methods break this deadlock and allow adding support for functional interface in core classes. Example - Method which 
  *		has been added to java.lang.Iterable.
+ *
+ * 	Functional Interfaces:
+ * 	=====================
+ *	-	Consumer - Represents an operation that accepts a single input argument and returns no result.
+ *			void accept(T t);		//Consumer<T>
+ *			void accept(T t, U u);	//BiConsumer<T, U>
+ *	-	Predicate - Represents a predicate (boolean-valued function) of one argument.
+ *			boolean test(T t);		//Predicate<T>
+ *			boolean test(T t, U u);	//BiPredicate<T, U>
+ *	-	Function - Represents a function that accepts one argument and produces a result.
+ *			R apply(T t);			//Function<T, T>
+ *			R apply(T t, U u);		//BiFunction<T, U, R>
  */
 public class E_001_FunctionalInterface {
 	public static void main(String[] args) {
@@ -59,21 +71,20 @@ interface Phone {
 	}
 }
 
-@FunctionalInterface
-interface MyFirstFunctionalInterface {
-	public void firstWork();
-
-	@Override
-	public String toString(); //Overridden from Object class
-
-	@Override
-	public boolean equals(Object obj); //Overridden from Object class
-}
-
 class AndroidPhone implements Phone {
 
 	public void call() {
 		System.out.println("This is call method.");
 	}
+}
 
+@FunctionalInterface
+interface MyFirstFunctionalInterface {
+	void firstWork();
+
+	@Override
+	String toString(); //Overridden from Object class
+
+	@Override
+	boolean equals(Object obj); //Overridden from Object class
 }

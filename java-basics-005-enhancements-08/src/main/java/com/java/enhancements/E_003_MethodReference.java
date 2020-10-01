@@ -37,11 +37,13 @@ public class E_003_MethodReference {
 		 * Method reference to instance method from instance – ClassInstance::instanceMethodName
 		 */
 		List<Integer> integers2 = Arrays.asList(1,12,433,5);
-		Optional<Integer> max2 = integers2.stream().reduce( Math::max ); 
-		max2.ifPresent( System.out::println ); 
+		Optional<Integer> max2 = integers2.stream().reduce( Math::max );
+		max2.ifPresent( System.out::println );
 		//or
 		integers.stream().reduce( Math::max ).ifPresent(System.out::println);
-		
+		//or
+		integers2.stream().reduce((a,b) -> (a>b) ? a : b).ifPresent(System.out::println);
+
 		/*
 		 * Method reference to instance method from class type – Class::instanceMethodName
 		 */

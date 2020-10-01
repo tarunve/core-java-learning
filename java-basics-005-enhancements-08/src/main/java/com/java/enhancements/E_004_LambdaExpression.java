@@ -72,20 +72,27 @@ public class E_004_LambdaExpression {
 		/*
 		 * Sorting employees objects by their name
 		 */
-		Employee[] employees = { new Employee("David"), new Employee("Naveen"), new Employee("Alex"), new Employee("Richard") };
+		E_004_LambdaExpression obj1 = new E_004_LambdaExpression();
+		obj1.sortEmployees();
+
+	}
+
+	private void sortEmployees() {
+		Employee[] employees = {new Employee("David"), new Employee("Naveen"), new Employee("Alex"), new Employee("Richard")};
 		System.out.println("Before Sorting Names: " + Arrays.toString(employees));
 		Arrays.sort(employees, Employee::nameCompare);
 		System.out.println("After Sorting Names " + Arrays.toString(employees));
 	}
 
 	static class Employee {
-		String name;
+		protected String name;
 
 		Employee(String name) {
 			this.name = name;
 		}
 
-		public static int nameCompare(Employee a1, Employee a2) {
+		public int nameCompare(Employee a1) {
+			Employee a2 = this;
 			return a1.name.compareTo(a2.name);
 		}
 

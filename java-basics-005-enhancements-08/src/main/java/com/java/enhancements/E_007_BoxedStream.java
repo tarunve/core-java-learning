@@ -20,18 +20,18 @@ public class E_007_BoxedStream {
 		List<Integer> ints = IntStream.of(1, 2, 3, 4, 5).boxed().collect(Collectors.toList());
 		System.out.println(ints);
 		Optional<Integer> max = IntStream.of(1, 2, 3, 4, 5).boxed().max(Integer::compareTo);
-		System.out.println(max);
+		max.ifPresent(System.out::println);
 
 		/*
 		 * LongStream
 		 */
-		List<Long> longs = LongStream.of(1l, 2l, 3l, 4l, 5l).boxed().collect(Collectors.toList());
+		List<Long> longs = LongStream.of(1L, 2L, 3L, 4L, 5L).boxed().collect(Collectors.toList());
 		System.out.println(longs);
 
 		/*
 		 * DoubleStream
 		 */
-		List<Double> doubles = DoubleStream.of(1d, 2d, 3d, 4d, 5d).boxed().collect(Collectors.toList());
+		List<Double> doubles = DoubleStream.of(1D, 2D, 3D, 4D, 5D).boxed().collect(Collectors.toList());
 		System.out.println(doubles);
 	}
 }

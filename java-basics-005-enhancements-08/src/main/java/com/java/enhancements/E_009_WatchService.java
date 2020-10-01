@@ -27,7 +27,7 @@ public class E_009_WatchService {
 		 */
 		Java8WatchServiceExample(Path dir) throws IOException {
 			this.watcher = FileSystems.getDefault().newWatchService();
-			this.keys = new HashMap<WatchKey, Path>();
+			this.keys = new HashMap<>();
 
 			walkAndRegisterDirectories(dir);
 		}

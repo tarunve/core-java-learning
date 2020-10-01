@@ -24,7 +24,7 @@ public class E_006_StreamsMapReduce {
 		};
 		Stream< Integer> s = list.stream();
 		Stream<Integer> s1 = s.map(f);
-		Integer result = (Integer)s1.reduce(0,b);
+		Integer result = s1.reduce(0,b);
 		
 		System.out.println(result);
 		
@@ -33,7 +33,7 @@ public class E_006_StreamsMapReduce {
 		BinaryOperator<Integer> b1 = (i,j) -> i+j;
 		Stream< Integer> s0 = list.stream();
 		Stream<Integer> s2 = s0.map(f1);
-		Integer result1 = (Integer)s2.reduce(0,b1);
+		Integer result1 = s2.reduce(0,b1);
 		System.out.println(result1);
 		
 		//stream 

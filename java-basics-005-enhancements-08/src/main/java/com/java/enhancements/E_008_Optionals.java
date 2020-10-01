@@ -69,6 +69,8 @@ public class E_008_Optionals {
 		if(possible4.isPresent()){
 		    System.out.println(possible4.get());
 		}
+		//or
+		possible4.ifPresent(System.out::println);
 		
 		/*
 		 * Filter using Optional

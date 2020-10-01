@@ -49,7 +49,7 @@ public class E_002_ForEach {
 		
 		
 		/*
-		 * List forEach()
+		 * List forEach() :: Lambda expression as Method Reference.
 		 */
 		List<Integer> numberList = Arrays.asList(1,2,3,4,5);
 		Consumer<Integer> action = System.out::println;
