@@ -34,7 +34,7 @@ public class T_002_ObserverPattern {
 	 * 	Create a Observer Interface and its concrete implementations.
 	 * 	These Observers subscribe to specific topics(subjects) so that it can display the updates.
 	 */
-	static abstract class Observer {
+	abstract static class Observer {
 		public abstract void update(String str);
 	}
 
@@ -59,12 +59,12 @@ public class T_002_ObserverPattern {
 	 * 	contain lists to keep track of subscribed observes that need to be notified.
 	 */
 	public interface Topic {
-		public void register(Observer obj);
-		public void notifyObservers(String str);
+		void register(Observer obj);
+		void notifyObservers(String str);
 	}
 	
 	static class AddItemTopic implements Topic {
-		List<Observer> addItemObservers = new ArrayList<>();
+		private final List<Observer> addItemObservers = new ArrayList<>();
 		
 		@Override
 		public void register(Observer observer) {
@@ -79,7 +79,7 @@ public class T_002_ObserverPattern {
 	}
 
 	static class AddPaymentTopic implements Topic {
-		List<Observer> addPaymentObservers = new ArrayList<>();
+		private final List<Observer> addPaymentObservers = new ArrayList<>();
 		
 		@Override
 		public void register(Observer observer) {
@@ -94,7 +94,7 @@ public class T_002_ObserverPattern {
 	}
 
 	static class CompleteOrderTopic implements Topic {
-		List<Observer> completeOrderObservers = new ArrayList<>();
+		private final List<Observer> completeOrderObservers = new ArrayList<>();
 		
 		@Override
 		public void register(Observer observer) {

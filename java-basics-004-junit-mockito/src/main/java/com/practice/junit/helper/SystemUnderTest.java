@@ -9,6 +9,7 @@ public class SystemUnderTest {
 
 	public int methodUsingAnArrayListConstructor() {
 		ArrayList list = new ArrayList();
+		list.add(1);
 		return list.size();
 	}
 

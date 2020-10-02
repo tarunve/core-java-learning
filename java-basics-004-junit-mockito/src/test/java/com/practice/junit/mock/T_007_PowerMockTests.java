@@ -57,14 +57,14 @@ public class T_007_PowerMockTests {
 		when(mockList.size()).thenReturn(SOME_DUMMY_SIZE);
 		PowerMockito.whenNew(ArrayList.class).withAnyArguments().thenReturn(mockList);
 		int size = systemUnderTest.methodUsingAnArrayListConstructor();
-		Assert.assertEquals(0, size);
+		Assert.assertEquals(1, size);
 	}
 	
 	@Test
 	public void powerMockito_CallingAPrivateMethod() throws Exception {
-		when(dependencyMock.retrieveAllStats()).thenReturn(Arrays.asList(1, 2, 3));
+		when(dependencyMock.retrieveAllStats()).thenReturn(Arrays.asList(1, 2, 3, 5));
 		long value = (Long) Whitebox.invokeMethod(systemUnderTest, "privateMethodUnderTest");
-		Assert.assertEquals(6, value);
+		Assert.assertEquals(11, value);
 	}
 	
 	@Test(expected=RuntimeException.class)

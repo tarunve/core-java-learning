@@ -76,7 +76,7 @@ public class T_003_CommandPattern {
 	 * Create Command interface and its concrete implementations that represent various commands.
 	 */
 	public static interface Command {
-		public abstract void execute();
+		void execute();
 	}
 
 	public static class OrderMainDish implements Command {

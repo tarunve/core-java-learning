@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * 	Software Examples:
  * 	-----------------
  * 	1.	Undo functionalities in Text Editors.
- * 	2.	Snapshots of softwares.
+ * 	2.	Snapshots of software.
  *
  * 	Java SDK Examples
  * 	-----------------
