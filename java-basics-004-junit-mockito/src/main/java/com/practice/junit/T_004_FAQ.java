@@ -58,6 +58,24 @@ package com.practice.junit;
  * 	Can I mock private methods?
  * 	---------------------------
  * 	->	No. From the standpoint of testing... private methods don't exist.
+ *
+ * 	Can we mock final methods?
+ * 	-------------------------
+ * 	->  Mockito 2.x now supports final method and final class stubbing.
+ * 	->  Mocking of final classes and methods is an incubating, opt-in feature. This feature has to be
+ * 	    explicitly activated by creating the file src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker
+ * 	    containing a single line:
+ * 	        mock-maker-inline
+ * 	->  After you create this file you can do:
+ *
+ *          final class FinalClass {
+ *              final String finalMethod() { return "something"; }
+ *          }
+ *
+ *          FinalClass concrete = new FinalClass();
+ *          FinalClass mock = mock(FinalClass.class);
+ *          given(mock.finalMethod()).willReturn("not anymore");
+ *          assertThat(mock.finalMethod()).isNotEqualTo(concrete.finalMethod());
  * 
  * 	Is Mockito thread-safe?
  * 	-----------------------

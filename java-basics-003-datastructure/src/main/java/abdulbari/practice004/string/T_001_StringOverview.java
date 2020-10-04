@@ -22,6 +22,8 @@ public class T_001_StringOverview {
 
         System.out.println(isValidPassword("Tarun".toCharArray()));
         System.out.println(isValidPassword("Tarun@".toCharArray()));
+
+        System.out.println(reverse("Tarun"));
     }
 
     public static int length(String str){
@@ -30,11 +32,25 @@ public class T_001_StringOverview {
 
     public static boolean isValidPassword(char[] pass){
         int i=0;
-        for(i=0; pass[i] != '\0'; i++){
+        for(i=0; i<pass.length && pass[i] != '\0'; i++){
             if(!(pass[i] >= 65 && pass[i] <=90) && !(pass[i] >= 97 && pass[i] <=122) && !(pass[i] >= 48 && pass[i] <=57)){
                 return false;
             }
         }
         return true;
+    }
+
+    public static String reverse(String str){
+        char[] chArr = str.toCharArray();
+        int j = chArr.length-1;
+        int i=0;
+        while(i<j){
+            char temp = chArr[i];
+            chArr[i] = chArr[j];
+            chArr[j] = temp;
+            i++;
+            j--;
+        }
+        return new String(chArr);
     }
 }
