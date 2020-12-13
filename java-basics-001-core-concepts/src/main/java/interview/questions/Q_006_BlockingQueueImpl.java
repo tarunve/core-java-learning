@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 import java.util.LinkedList;
 import java.util.Queue;

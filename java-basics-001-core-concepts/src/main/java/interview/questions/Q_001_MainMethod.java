@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 public class Q_001_MainMethod extends ParentClass {
 

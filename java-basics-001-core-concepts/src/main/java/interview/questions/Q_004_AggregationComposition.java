@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 /*
  * 	->	Aggregation and composition are special type of association and differ only in weight of

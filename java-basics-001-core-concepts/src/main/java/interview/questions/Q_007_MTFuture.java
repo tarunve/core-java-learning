@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

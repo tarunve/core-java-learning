@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 /**
  * 	->	Deadlock occurs in software program due to circular dependencies on shared resources

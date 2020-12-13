@@ -1,4 +1,4 @@
-package com.java.interview.questions;
+package interview.questions;
 
 /*
  * 1) What happens when double is divided by 0.0. Integer (a/0) will throw exception - what about double.
