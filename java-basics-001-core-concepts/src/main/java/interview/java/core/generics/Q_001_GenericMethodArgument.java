@@ -1,4 +1,5 @@
-package com.java.basic.concepts.generics;
+package interview.java.core.generics;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +9,7 @@ import java.util.List;
  * 		Hence we would be able to use only that class. 
  * 	->	When using List<?> we can pass any type to this method and it will be a generic method.  
  */
-public class TestClass {
+public class Q_001_GenericMethodArgument {
 	
 	static class A<T>{
 		void method(List<?> obj){

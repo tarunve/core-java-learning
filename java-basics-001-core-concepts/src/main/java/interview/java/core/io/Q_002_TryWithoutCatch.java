@@ -1,4 +1,4 @@
-package interview.java.core.oops;
+package interview.java.core.io;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -21,7 +21,7 @@ import java.io.IOException;
  *  -   Finally will be always executed after try and catch blocks whether there is an
  *      exception raised or not.
  */
-public class Q_004_TryWithoutCatch {
+public class Q_002_TryWithoutCatch {
 
     public static class ResourceManagementInJava7 {
         public static void main(String[] args) throws IOException {

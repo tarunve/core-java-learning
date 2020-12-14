@@ -4,6 +4,10 @@ package interview.java.core.oops;
  *  -   A clone is an exact copy of the original. In java, it essentially means the ability
  *      to create an object with similar state as the original object. The java clone() method
  *      provides this functionality.
+ *  -   A class implements the Cloneable interface to indicate to the Object.clone() method
+ *      that it is legal for that method to make a field-for-field copy of instances of that class.
+ *  -   Invoking Object's clone method on an instance that does not implement the Cloneable interface
+ *      results in the exception CloneNotSupportedException being thrown.
  *  -   By default, java cloning is ‘field by field copy’ i.e. as the Object class does not
  *      have idea about the structure of class on which clone() method will be invoked.
  *  -   So, JVM when called for cloning, do following things:
