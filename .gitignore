@@ -29,3 +29,6 @@ java-basics-005-enhancements-08/java-basics-005-enhancements-08.iml
 ### Ignoring files for - java-basics-006-xml-parser ###
 java-basics-006-xml-parser/target
 java-basics-006-xml-parser/java-basics-006-xml-parser.iml
+
+### xtra-files ###
+xtra-files/xtra-files.iml
