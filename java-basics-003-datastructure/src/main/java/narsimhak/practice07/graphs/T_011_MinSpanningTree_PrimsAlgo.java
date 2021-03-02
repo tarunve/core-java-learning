@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 /*
  * 	->	The Spanning tree of a graph is a subgraph that contains all the vertices and is also a tree. A graph 
@@ -7,13 +7,13 @@ package practice07.graphs;
  * 		the vertices of G with minimum total cost (weights).
  * 	->	A minimum spanning tree exists only if the graph is connected. 
  * 
- * 	Prim’s Algorithm
+ * 	Primï¿½s Algorithm
  * 	----------------
- * 	->	Prim’s algorithm is almost the same as Dijkstra’s algorithm. As in Dijkstra’s algorithm, in Prim’s 
+ * 	->	Primï¿½s algorithm is almost the same as Dijkstraï¿½s algorithm. As in Dijkstraï¿½s algorithm, in Primï¿½s 
  * 		algorithm we keep the values distance and paths in the distance table. The only exception is that since 
  * 		the definition of distance is different, the updating statement also changes a little. The update 
  * 		statement is simpler than before.
- * 	->	The entire implementation of this algorithm is identical to that of Dijkstra’s algorithm. The running 
+ * 	->	The entire implementation of this algorithm is identical to that of Dijkstraï¿½s algorithm. The running 
  * 		time is O(|V|2) without heaps [good for dense graphs], and O(ElogV) using binary heaps [good for sparse graphs].
  */
 public class T_011_MinSpanningTree_PrimsAlgo {

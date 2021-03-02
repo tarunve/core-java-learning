@@ -1,4 +1,4 @@
-package practice13.greedy.algo;
+package narsimhak.practice13.greedy.algo;
 
 /*
  * 	->	Greedy algorithms work in stages. In each stage, a decision is made that is good at that point,
@@ -21,16 +21,16 @@ package practice13.greedy.algo;
  * 	
  * 	Greedy Applications
  * 	-------------------
- * 	• Sorting: Selection sort, Topological sort
- * 	• Priority Queues: Heap sort
- * 	• Huffman coding compression algorithm
- * 	• Prim’s and Kruskal’s algorithms
- * 	• Shortest path in Weighted Graph [Dijkstra’s]
- * 	• Coin change problem
- * 	• Fractional Knapsack problem
- * 	• Disjoint sets-UNION by size and UNION by height (or rank)
- * 	• Job scheduling algorithm
- * 	• Greedy techniques can be used as an approximation algorithm for complex problems
+ * 	ï¿½ Sorting: Selection sort, Topological sort
+ * 	ï¿½ Priority Queues: Heap sort
+ * 	ï¿½ Huffman coding compression algorithm
+ * 	ï¿½ Primï¿½s and Kruskalï¿½s algorithms
+ * 	ï¿½ Shortest path in Weighted Graph [Dijkstraï¿½s]
+ * 	ï¿½ Coin change problem
+ * 	ï¿½ Fractional Knapsack problem
+ * 	ï¿½ Disjoint sets-UNION by size and UNION by height (or rank)
+ * 	ï¿½ Job scheduling algorithm
+ * 	ï¿½ Greedy techniques can be used as an approximation algorithm for complex problems
  */
 public class T_001_GreedyOverview {
 	

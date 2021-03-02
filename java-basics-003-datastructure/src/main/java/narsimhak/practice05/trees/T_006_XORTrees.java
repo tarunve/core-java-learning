@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	This concept is similar to memory efficient doubly linked lists of Linked Lists chapter. Also, like

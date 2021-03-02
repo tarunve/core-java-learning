@@ -1,4 +1,4 @@
-package practice02.linkedlist;
+package narsimhak.practice02.linkedlist;
 
 public class P_001_ProblemFindIfLoopPresent<T> {
 	

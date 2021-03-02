@@ -1,4 +1,4 @@
-package practice02.linkedlist;
+package narsimhak.practice02.linkedlist;
 
 public class T_004_CircularLinkedList<E> {
 

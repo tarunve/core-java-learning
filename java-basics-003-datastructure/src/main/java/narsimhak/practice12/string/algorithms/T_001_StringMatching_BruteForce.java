@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 /*
  * 	->	In this method, for each possible position in the text T we check whether the pattern P 

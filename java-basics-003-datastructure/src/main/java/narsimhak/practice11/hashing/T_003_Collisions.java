@@ -1,4 +1,4 @@
-package practice11.hashing;
+package narsimhak.practice11.hashing;
 
 /*
  * 	->	Hash functions are used to map each key to a different address space, but practically it is not

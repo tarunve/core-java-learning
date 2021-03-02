@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 /*
  * 	->	All of the above algorithms preprocess the pattern to make the pattern searching faster. The 
@@ -24,9 +24,9 @@ package practice12.string.algorithms;
  * 		1) 	Starting from the first character of the pattern and root of Suffix Tree, do following for every character.
  * 			a) 	For the current character of pattern, if there is an edge from the current node of suffix tree, 
  * 				follow the edge.
- * 			b) 	If there is no edge, print “pattern doesn’t exist in text” and return.
+ * 			b) 	If there is no edge, print ï¿½pattern doesnï¿½t exist in textï¿½ and return.
  * 		2)	If all characters of pattern have been processed, i.e., there is a path from root for characters of 
- * 			the given pattern, then print “Pattern found”.
+ * 			the given pattern, then print ï¿½Pattern foundï¿½.
  * 
  * 	Applications of Suffix Trees
  * 	----------------------------

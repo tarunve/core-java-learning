@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	Adelson-Velskii and Landis
@@ -22,7 +22,7 @@ package practice05.trees;
  * 	Types of Violations
  * 	-------------------
  * 	->	Let us assume the node that must be re-balanced is X. Since any node has at most two children, and a height 
- * 		imbalance requires that X’s two subtree heights differ by two, we can easily observe that a violation might 
+ * 		imbalance requires that Xï¿½s two subtree heights differ by two, we can easily observe that a violation might 
  * 		occur in four cases:
  * 		1.	An insertion into the left subtree of the left child of X.
  * 		2.	An insertion into the right subtree of the left child of X.

@@ -1,4 +1,4 @@
-package practice04.stack;
+package narsimhak.practice04.stack;
 
 public class P_001_ProblemArrayWithTwoStacks {
 	

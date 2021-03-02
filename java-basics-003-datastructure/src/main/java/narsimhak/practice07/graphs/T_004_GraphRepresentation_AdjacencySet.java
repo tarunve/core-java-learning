@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 /*
  * 	->	It is very much similar to adjacency list but instead of using Linked lists, Disjoint Sets 
@@ -8,7 +8,7 @@ package practice07.graphs;
  * 	-----------------------------------
  * 	->	Directed and undirected graphs are represented with the same structures. For directed graphs,
  *  	everything is the same, except that each edge is represented just once. An edge from x to y is
- *  	represented by a 1 value in Adj[x][y] in the adjacency matrix, or by adding y on x’s adjacency list.
+ *  	represented by a 1 value in Adj[x][y] in the adjacency matrix, or by adding y on xï¿½s adjacency list.
  *  	For weighted graphs, everything is the same, except fill the adjacency matrix with weights instead
  *  	of boolean values.
  *  	

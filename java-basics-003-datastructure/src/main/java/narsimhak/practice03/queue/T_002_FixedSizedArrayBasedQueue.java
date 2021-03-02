@@ -1,4 +1,4 @@
-package practice03.queue;
+package narsimhak.practice03.queue;
 
 /*
  * 	->	Performance: Let n be the number of elements in the queue:

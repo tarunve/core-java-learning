@@ -1,4 +1,4 @@
-package practice09.searching;
+package narsimhak.practice09.searching;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ public class Problems_2 {
 	/*
 	 * Find two elements whose sum is closest to zero: Given an array with both positive and 
 	 * negative numbers, find the two elements such that their sum is closest to zero. For the 
-	 * below array, algorithm should give -80 and 85. Example: 1 60 – 10 70 – 80 85.
+	 * below array, algorithm should give -80 and 85. Example: 1 60 ï¿½ 10 70 ï¿½ 80 85.
 	 * Time complexity: O(n^2). Space Complexity: O(1).
 	 */
 	public static void twoNumbersSumClosestToZero(int[] arr){
@@ -125,9 +125,9 @@ public class Problems_2 {
 	}
 	
 	/*
-	 * Sort an array of 0’s, 1’s and 2’s [or R’s, G’s and B’s]: Given an array A[] consisting of 0’s, 
-	 * 1’s and 2’s, give an algorithm for sorting A[].The algorithm should put all 0’s first, then all 
-	 * 1’s and finally all 2’s at the end. Example Input = {0,1,1,0,1,2,1,2,0,0,0,1}, Output = 
+	 * Sort an array of 0ï¿½s, 1ï¿½s and 2ï¿½s [or Rï¿½s, Gï¿½s and Bï¿½s]: Given an array A[] consisting of 0ï¿½s, 
+	 * 1ï¿½s and 2ï¿½s, give an algorithm for sorting A[].The algorithm should put all 0ï¿½s first, then all 
+	 * 1ï¿½s and finally all 2ï¿½s at the end. Example Input = {0,1,1,0,1,2,1,2,0,0,0,1}, Output = 
 	 * {0,0,0,0,0,1,1,1,1,1,2,2}.
 	 * Time Complexity: O(n). Space Complexity: O(1).
 	 */

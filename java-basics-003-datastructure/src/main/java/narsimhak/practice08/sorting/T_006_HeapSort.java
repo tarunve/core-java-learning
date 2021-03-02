@@ -1,4 +1,4 @@
-package practice08.sorting;
+package narsimhak.practice08.sorting;
 
 /*
  * 	->	HeapSort is a comparison-based sorting algorithm and is part of the selection sort family. Although 

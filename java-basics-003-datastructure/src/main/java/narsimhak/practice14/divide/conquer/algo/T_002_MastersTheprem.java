@@ -1,4 +1,4 @@
-package practice14.divide.conquer.algo;
+package narsimhak.practice14.divide.conquer.algo;
 
 /**
  * 	->	In the D & C method, we solve the sub problems recursively. All problems are

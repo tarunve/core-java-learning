@@ -1,8 +1,8 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 
 /*
- * 	->	In earlier sections, we have seen various problems like finding the Kth – smallest – element in the
+ * 	->	In earlier sections, we have seen various problems like finding the Kth ï¿½ smallest ï¿½ element in the
  * 		tree and other similar ones. Of all the problems the worst complexity is O(n), where n is the number
  * 		of nodes in the tree. To perform such operations in O(logn), augmented trees are useful. In these trees,
  * 		extra information is added to each node and that extra data depends on the problem we are trying to solve.
@@ -30,7 +30,7 @@ public class T_013_AugmentedTrees {
 		
 	}
 	
-	//Kth – smallest – operation can be defined as:
+	//Kth ï¿½ smallest ï¿½ operation can be defined as:
 	//Time Complexity: O(logn). Space Complexity: O(logn).
 	public BinarySearchTreeNode kthSmallest(BinarySearchTreeNode X, int K){
 		int r = X.left.size + 1;

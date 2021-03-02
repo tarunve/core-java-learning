@@ -1,4 +1,4 @@
-package practice02.linkedlist;
+package narsimhak.practice02.linkedlist;
 
 /*
  * ->	We can navigate in both directions.

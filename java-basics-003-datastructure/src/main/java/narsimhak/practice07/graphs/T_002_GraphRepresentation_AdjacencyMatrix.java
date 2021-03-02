@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 /*
  * 	Graph Representation
@@ -11,12 +11,12 @@ package practice07.graphs;
  * 
  * 	Adjacency Matrix:
  * 	----------------
- * 	->	In this method, we use a matrix with size V × V. The values of matrix are boolean. Let us assume
+ * 	->	In this method, we use a matrix with size V ï¿½ V. The values of matrix are boolean. Let us assume
  * 		the matrix is Adj. The value Adj[u, v] is set to 1 if there is an edge from vertex u to vertex v 
  * 		and 0 otherwise.
  * 	->	In the matrix, each edge is represented by two bits for undirected graphs. That means, an edge
  * 		from u to v is represented by 1 value in both Adj[u ,v ] and Adj[u,v]. To save time, we can 
- * 		process only half of this symmetric matrix. Also, we can assume that there is an “edge” from each
+ * 		process only half of this symmetric matrix. Also, we can assume that there is an ï¿½edgeï¿½ from each
  * 		vertex to itself. So, Adj[u, u] is set to 1 for all vertices.
  * 	->	If the graph is a directed graph then we need to mark only one entry in the adjacency matrix.
  * 

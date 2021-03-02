@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 /*
  * 	Graph:
@@ -26,7 +26,7 @@ package practice07.graphs;
  *  	->	A self loop is an edge that connects a vertex to itself.
  *  	->	Two edges are parallel if they connect the same pair of vertices.
  *  	->	The Degree of a vertex is the number of edges incident on it.
- *  	->	A subgraph is a subset of a graph’s edges (with associated vertices) that form a graph.
+ *  	->	A subgraph is a subset of a graphï¿½s edges (with associated vertices) that form a graph.
  *  	->	A path in a graph is a sequence of adjacent vertices. Simple path is a path with no repeated vertices.
  *  	->	A cycle is a path where the first and last vertices are the same. A simple cycle is a cycle with 
  *  		no repeated vertices or edges (except the first and last vertices).
@@ -35,7 +35,7 @@ package practice07.graphs;
  *  	->	If a graph is not connected then it consists of a set of connected components.
  *  	->	A directed acyclic graph [DAG] is a directed graph with no cycles.
  *  	->	A forest is a disjoint set of trees.
- *  	->	A spanning tree of a connected graph is a subgraph that contains all of that graph’s vertices and 
+ *  	->	A spanning tree of a connected graph is a subgraph that contains all of that graphï¿½s vertices and 
  *  		is a single tree. A spanning forest of a graph is the union of spanning trees of its connected 
  *  		components.
  *  	->	A bipartite graph is a graph whose vertices can be divided into two sets such that all edges 
@@ -46,7 +46,7 @@ package practice07.graphs;
  *  	->	Graphs with relatively few of the possible edges missing are called dense.
  *  	->	Directed weighted graphs are sometimes called network.
  *  	->	We will denote the number of vertices in a given graph by |V|, and the number of edges by |E|. 
- *  		Note that E can range anywhere from 0 to |V|(|V| – l)/2 (in undirected graph). This is because 
+ *  		Note that E can range anywhere from 0 to |V|(|V| ï¿½ l)/2 (in undirected graph). This is because 
  *  		each node can connect to every other node.
  *  
  *  	Applications of Graphs

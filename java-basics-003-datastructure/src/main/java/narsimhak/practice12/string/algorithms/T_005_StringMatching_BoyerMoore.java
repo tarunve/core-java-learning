@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 /*
  * 	->	Boyer Moore algorithm also pre processes the pattern. Boyer Moore is a combination of following two approaches.
@@ -16,19 +16,19 @@ package practice12.string.algorithms;
  * 
  * 	Bad Character Heuristic
  * 	-----------------------
- * 	->	The idea of bad character heuristic is simple. The character of the text which doesn’t match with the 
- * 		current character of the pattern is called the Bad Character. Upon mismatch, we shift the pattern until –
+ * 	->	The idea of bad character heuristic is simple. The character of the text which doesnï¿½t match with the 
+ * 		current character of the pattern is called the Bad Character. Upon mismatch, we shift the pattern until ï¿½
  * 		1) The mismatch becomes a match
  * 		2) Pattern P move past the mismatched character.
  * 
- * 	Case 1 – Mismatch become match
+ * 	Case 1 ï¿½ Mismatch become match
  * 	------------------------------
  * 	->	We will lookup the position of last occurrence of mismatching character in pattern and if mismatching 
- * 		character exist in pattern then we’ll shift the pattern such that it get aligned to the mismatching character 
+ * 		character exist in pattern then weï¿½ll shift the pattern such that it get aligned to the mismatching character 
  * 		in text T.
- * 	Case 2 – Pattern move past the mismatch character
+ * 	Case 2 ï¿½ Pattern move past the mismatch character
  * 	-------------------------------------------------
- * 	->	We’ll lookup the position of last occurrence of mismatching character in pattern and if character does not 
+ * 	->	Weï¿½ll lookup the position of last occurrence of mismatching character in pattern and if character does not 
  * 		exist we will shift pattern past the mismatching character.
  * 
  * 	The bad character heuristic takes O(n/m) time in the best case.

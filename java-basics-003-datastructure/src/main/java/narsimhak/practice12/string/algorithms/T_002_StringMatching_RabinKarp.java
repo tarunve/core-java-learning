@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 /*
  * 	->	In this method, we will use the hashing technique and instead of checking for each possible

@@ -1,10 +1,10 @@
-package practice08.sorting;
+package narsimhak.practice08.sorting;
 
 /*
  * 	->	Tree sort uses a binary search tree. It involves scanning each element of the input and placing it 
  * 		into its proper position in a binary search tree. This has two phases:
- * 		• First phase is creating a binary search tree using the given array elements.
- * 		• Second phase is traversing the given binary search tree in in-order, thus resulting in a sorted array.
+ * 		ï¿½ First phase is creating a binary search tree using the given array elements.
+ * 		ï¿½ Second phase is traversing the given binary search tree in in-order, thus resulting in a sorted array.
  * 	->	The average number of comparisons for this method is O(nlogn). But in worst case, the number of
  * 		comparisons is reduced by O(n2), a case which arises when the sort tree is skew tree.
  */

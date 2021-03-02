@@ -1,4 +1,4 @@
-package practice10.selection.alogo.median;
+package narsimhak.practice10.selection.alogo.median;
 
 
 /*

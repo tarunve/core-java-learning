@@ -1,4 +1,4 @@
-package practice14.divide.conquer.algo;
+package narsimhak.practice14.divide.conquer.algo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -120,7 +120,7 @@ public class Problems_1 {
 	 * that the bottom of all buildings lie on a fixed horizontal line (bottom edges are collinear). 
 	 * The input is a list of triples; one per building. A building Bi is represented by the triple 
 	 * (li, hi, ri) where li denote the x-position of the left edge and ri denote the x-position of 
-	 * the right edge, and hi denotes the building’s height. Give an algorithm that computes the 
+	 * the right edge, and hi denotes the buildingï¿½s height. Give an algorithm that computes the 
 	 * skyline (in 2 dimensions) of these buildings, eliminating hidden lines. In the diagram below 
 	 * there are 8 buildings, represented from left to right by the triplets (1, 14, 7), (3, 9, 10), 
 	 * (5, 17, 12), (14, 11, 18), (15, 6, 27), (20, 19, 22), (23, 15,30) and (26, 14, 29).

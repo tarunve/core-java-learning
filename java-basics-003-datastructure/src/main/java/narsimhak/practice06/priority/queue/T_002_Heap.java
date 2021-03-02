@@ -1,9 +1,9 @@
-package practice06.priority.queue;
+package narsimhak.practice06.priority.queue;
 
 /*
  * 	->	A heap is a tree with some special properties. The basic requirement of a heap is that the value of
  * 		a node must be > (or <) than the values of its children. This is called heap property. A heap also
- * 		has the additional property that all leaves should be at h or h – 1 levels (where h is the height of
+ * 		has the additional property that all leaves should be at h or h ï¿½ 1 levels (where h is the height of
  * 		the tree) for some h > 0 (complete binary trees). That means heap should form a complete binary tree.
  * 	
  * 	Types of Heaps

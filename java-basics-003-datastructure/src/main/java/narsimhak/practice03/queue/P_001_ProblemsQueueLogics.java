@@ -1,4 +1,4 @@
-package practice03.queue;
+package narsimhak.practice03.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

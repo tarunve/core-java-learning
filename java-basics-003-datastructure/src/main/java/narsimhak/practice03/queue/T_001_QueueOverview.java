@@ -1,4 +1,4 @@
-package practice03.queue;
+package narsimhak.practice03.queue;
 
 /*
  * 	->	A queue is an ordered list in which insertions are done at one end (rear) and deletions
@@ -21,8 +21,8 @@ package practice03.queue;
  *
  *	Exceptions
  *	----------
- *	Similar to other ADTs, executing DeQueue on an empty queue throws an “Empty Queue Exception”
- *	and executing EnQueue on a full queue throws a “Full Queue Exception”.
+ *	Similar to other ADTs, executing DeQueue on an empty queue throws an ï¿½Empty Queue Exceptionï¿½
+ *	and executing EnQueue on a full queue throws a ï¿½Full Queue Exceptionï¿½.
  *
  *	Direct Applications
  *	-------------------

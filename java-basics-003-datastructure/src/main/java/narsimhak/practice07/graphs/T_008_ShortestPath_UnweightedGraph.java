@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * 		weight of 1. The algorithm is similar to BFS and we need to use the following data structures:
  * 		->	A distance table with three columns (each row corresponds to a vertex):
  * 			->	Distance from source vertex.
- * 			->	Path – contains the name of the vertex through which we get the shortest distance.
+ * 			->	Path ï¿½ contains the name of the vertex through which we get the shortest distance.
  * 		->	A queue is used to implement breadth-first search. It contains vertices whose distance 
  * 			from the source node has been computed and their adjacent vertices are to be examined.
  * 

@@ -1,4 +1,4 @@
-package practice04.stack;
+package narsimhak.practice04.stack;
 
 import java.util.EmptyStackException;
 

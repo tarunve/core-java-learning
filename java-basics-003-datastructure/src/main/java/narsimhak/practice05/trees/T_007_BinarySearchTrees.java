@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	As the name suggests, the main use of this representation is for searching. In this 

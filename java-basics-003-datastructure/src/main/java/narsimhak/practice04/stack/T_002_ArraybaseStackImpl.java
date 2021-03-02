@@ -1,4 +1,4 @@
-package practice04.stack;
+package narsimhak.practice04.stack;
 
 /*
  * 	Performance: Let n be the number of elements in the stack. The complexities of stack operations

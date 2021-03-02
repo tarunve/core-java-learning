@@ -1,4 +1,4 @@
-package practice11.hashing;
+package narsimhak.practice11.hashing;
 
 
 public class Problems_2 {
@@ -53,7 +53,7 @@ public class Problems_2 {
 	
 	/*
 	 * Give an algorithm for finding the first non-repeated character in a string. For
-	 * example, the first non-repeated character in the string “abzddab” is ‘z’.
+	 * example, the first non-repeated character in the string ï¿½abzddabï¿½ is ï¿½zï¿½.
 	 */
 	public static char firstNonRepeatedChar(char[] str, int len){
 		int i,j;

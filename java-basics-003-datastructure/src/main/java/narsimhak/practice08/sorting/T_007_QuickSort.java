@@ -1,4 +1,4 @@
-package practice08.sorting;
+package narsimhak.practice08.sorting;
 
 import java.util.Arrays;
 
@@ -13,8 +13,8 @@ import java.util.Arrays;
  * 
  * 	->	The recursive algorithm consists of four steps:
  * 		1.	If there are one or no elements in the array to be sorted, return.
- * 		2.	Pick an element in the array to serve as the “pivot” point. (Usually the left-most element in the array)
- * 		3.	Split the array into two parts – one with elements larger than the pivot and the other with elements 
+ * 		2.	Pick an element in the array to serve as the ï¿½pivotï¿½ point. (Usually the left-most element in the array)
+ * 		3.	Split the array into two parts ï¿½ one with elements larger than the pivot and the other with elements 
  * 			smaller than the pivot.
  * 		4.	Recursively repeat the algorithm for both halves of the original array.
  * 

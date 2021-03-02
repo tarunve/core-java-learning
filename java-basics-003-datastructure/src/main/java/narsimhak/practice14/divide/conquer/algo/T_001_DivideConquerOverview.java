@@ -1,4 +1,4 @@
-package practice14.divide.conquer.algo;
+package narsimhak.practice14.divide.conquer.algo;
 
 /*
  * 	->	The D & C algorithm works by recursively breaking down a problem into two or more sub 
@@ -31,12 +31,12 @@ package practice14.divide.conquer.algo;
  * 
  * 	Divide and Conquer Applications
  * 	-------------------------------
- * 	• Binary Search
- * 	• Merge Sort and Quick Sort
- * 	• Median Finding
- * 	• Min and Max Finding
- * 	• Matrix Multiplication	
- * 	• Closest Pair problem
+ * 	ï¿½ Binary Search
+ * 	ï¿½ Merge Sort and Quick Sort
+ * 	ï¿½ Median Finding
+ * 	ï¿½ Min and Max Finding
+ * 	ï¿½ Matrix Multiplication	
+ * 	ï¿½ Closest Pair problem
  */
 public class T_001_DivideConquerOverview {
 	

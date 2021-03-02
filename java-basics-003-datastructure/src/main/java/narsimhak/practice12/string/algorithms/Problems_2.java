@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 import java.util.HashMap;
 import java.util.Map;

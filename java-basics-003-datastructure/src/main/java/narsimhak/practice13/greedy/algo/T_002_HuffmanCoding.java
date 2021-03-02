@@ -1,4 +1,4 @@
-package practice13.greedy.algo;
+package narsimhak.practice13.greedy.algo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Set;
  * 	->	Let us understand prefix codes with a counter example. Let there be four characters a, b, c and d, 
  * 		and their corresponding variable length codes be 00, 01, 0 and 1. This coding leads to ambiguity 
  * 		because code assigned to c is the prefix of codes assigned to a and b. If the compressed bit stream 
- * 		is 0001, the de-compressed output may be “cccd” or “ccb” or “acd” or “ab”.
+ * 		is 0001, the de-compressed output may be ï¿½cccdï¿½ or ï¿½ccbï¿½ or ï¿½acdï¿½ or ï¿½abï¿½.
  * 
  * 	->	There are mainly two major parts in Huffman Coding
  * 		1)	Build a Huffman Tree from input characters.

@@ -1,4 +1,4 @@
-package practice09.searching;
+package narsimhak.practice09.searching;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -92,7 +92,7 @@ public class Problems_1 {
 	}
 	
 	/*
-	 * Finding the Missing Number: We are given a list of n – 1 integers and these integers are in the 
+	 * Finding the Missing Number: We are given a list of n ï¿½ 1 integers and these integers are in the 
 	 * range of 1 to n. There are no duplicates in the list. One of the integers is missing in the list. 
 	 * Given an algorithm to find the missing integer. Example: I/P:[1,2,4,6,3,7,8] O/P: 5
 	 */

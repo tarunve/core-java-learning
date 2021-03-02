@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	In Red-black trees each node is associated with an extra attribute: the color, which is either red or black. 

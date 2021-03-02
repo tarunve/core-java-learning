@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	A tree is a data structure similar to a linked list but instead of each node pointing simply

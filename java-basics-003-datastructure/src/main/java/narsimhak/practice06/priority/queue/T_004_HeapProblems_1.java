@@ -1,4 +1,4 @@
-package practice06.priority.queue;
+package narsimhak.practice06.priority.queue;
 
 import java.util.Arrays;
 import java.util.LinkedList;

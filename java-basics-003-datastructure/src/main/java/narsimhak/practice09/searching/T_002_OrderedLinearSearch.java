@@ -1,10 +1,10 @@
-package practice09.searching;
+package narsimhak.practice09.searching;
 
 /*
- * 	->	If the elements of the array are already sorted, then in many cases we don’t have to scan the
+ * 	->	If the elements of the array are already sorted, then in many cases we donï¿½t have to scan the
  * 		complete array to see if the element is there in the given array or not. In the algorithm below, it
  * 		can be seen that, at any point if the value at A[i] is greater than the data to be searched, then we
- * 		just return –1 without searching the remaining array.
+ * 		just return ï¿½1 without searching the remaining array.
  * 	->	Time complexity of this algorithm is O(n).This is because in the worst case we need to scan the
  * 		complete array. But in the average case it reduces the complexity even though the growth rate is
  * 		the same. Space complexity: O(1).

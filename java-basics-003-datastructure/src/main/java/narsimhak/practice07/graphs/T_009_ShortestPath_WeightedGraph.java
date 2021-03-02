@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -8,10 +8,10 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 /*
- * 	Shortest path in Weighted Graph [Dijkstra’s]
+ * 	Shortest path in Weighted Graph [Dijkstraï¿½s]
  * 	--------------------------------------------
  * 	->	Single source shortest path algorithm.
- * 	->	A famous solution for the shortest path problem was developed by Dijkstra. Dijkstra’s algorithm
+ * 	->	A famous solution for the shortest path problem was developed by Dijkstra. Dijkstraï¿½s algorithm
  * 		is a generalization of the BFS algorithm. The regular BFS algorithm cannot solve the shortest path
  * 		problem as it cannot guarantee that the vertex at the front of the queue is the vertex closest to
  * 		source s.
@@ -19,13 +19,13 @@ import java.util.Set;
  * 			if(d(u) + c(u,v) < d(v))
  * 				then d(v) = d(u) + c(u,v)
  * 	
- * 	Notes on Dijkstra’s Algorithm
+ * 	Notes on Dijkstraï¿½s Algorithm
  * 	-----------------------------
  * 	->	It uses greedy method: Always pick the next closest vertex to the source.
  * 	->	It uses priority queue to store unvisited vertices by distance from s.
  * 	->	It does not work with negative weights.
  * 
- * 	Difference between Unweighted Shortest Path and Dijkstra’s Algorithm
+ * 	Difference between Unweighted Shortest Path and Dijkstraï¿½s Algorithm
  * 	--------------------------------------------------------------------
  * 	1)	To represent weights in the adjacency list, each vertex contains the weights of the edges 
  * 		(in addition to their identifier).
@@ -36,12 +36,12 @@ import java.util.Set;
  * 	4)	We update the distances in case the newly computed distance is smaller than the old distance which 
  * 		we have already computed.
  * 
- * 	->	In Dijkstra’s algorithm, the efficiency depends on the number of DeleteMins (V DeleteMins) and
+ * 	->	In Dijkstraï¿½s algorithm, the efficiency depends on the number of DeleteMins (V DeleteMins) and
  * 		updates for priority queues (E updates) that are used. If a standard binary heap is used then the
  * 		complexity is O(ElogV). The term ElogV comes from E updates (each update takes logV) for the
  * 		standard heap. If the set used is an array then the complexity is O(E + V2).
  * 
- * 	Disadvantages of Dijkstra’s Algorithm
+ * 	Disadvantages of Dijkstraï¿½s Algorithm
  * 	-------------------------------------
  * 	->	As discussed above, the major disadvantage of the algorithm is that it does a blind search, 
  * 		thereby wasting time and necessary resources.

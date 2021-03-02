@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -26,14 +26,14 @@ import java.util.Stack;
  * 		the root (let us say the root node has 1) then we get a complete sequence from 1 to the
  * 		number of nodes in the tree.
  * 	->	While traversing we should give numbering for NULL pointers also. A binary tree is called
- * 		complete binary tree if all leaf nodes are at height h or h – 1 and also without any
+ * 		complete binary tree if all leaf nodes are at height h or h ï¿½ 1 and also without any
  * 		missing number in the sequence.
  *
  * 	Properties:
  * 	----------
- * 	1.	The number of nodes n in a full binary tree is 2^h+1 – 1. Since, there are h levels we need
- * 		to add all nodes at each level [2^0 + 2^1+ 2^2 + . . . + 2^h = 2^h+1 – 1].
- * 	2.	The number of nodes n in a complete binary tree is between 2^h (minimum) and 2^h+1 – 1 (maximum).
+ * 	1.	The number of nodes n in a full binary tree is 2^h+1 ï¿½ 1. Since, there are h levels we need
+ * 		to add all nodes at each level [2^0 + 2^1+ 2^2 + . . . + 2^h = 2^h+1 ï¿½ 1].
+ * 	2.	The number of nodes n in a complete binary tree is between 2^h (minimum) and 2^h+1 ï¿½ 1 (maximum).
  * 	3.	The number of leaf nodes in a full binary tree is 2^h.
  * 	4.	The number of NULL links (wasted pointers) in a complete binary tree of n nodes is n + 1.
  *

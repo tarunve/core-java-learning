@@ -1,4 +1,4 @@
-package practice06.priority.queue;
+package narsimhak.practice06.priority.queue;
 
 /*
  * 	->	In some situations we may need to find the minimum/maximum element among a collection of elements. 
@@ -9,9 +9,9 @@ package practice06.priority.queue;
  * 		that, in priority queues, the order in which the elements enter the queue may not be the same in
  * 		which they were processed. An example application of a priority queue is job scheduling, which is 
  * 		prioritized instead of serving in first come first serve.
- * 	->	A priority queue is called an ascending – priority queue, if the item with the smallest key has the
+ * 	->	A priority queue is called an ascending ï¿½ priority queue, if the item with the smallest key has the
  * 		highest priority (that means, delete the smallest element always). Similarly, a priority queue is
- * 		said to be a descending —priority queue if the item with the largest key has the highest priority
+ * 		said to be a descending ï¿½priority queue if the item with the largest key has the highest priority
  * 		(delete the maximum element always). Since these two types are symmetric we will be	concentrating 
  * 		on one of them: ascending-priority queue.
  * 
@@ -24,15 +24,15 @@ package practice06.priority.queue;
  * 			->	GetMinimum/GetMaximum: Return the element with the smallest/largest key without deleting it.
  * 		Auxiliary Priority Queues Operations
  * 		------------------------------------
- * 		->	kth – Smallest/kth – Largest: Returns the kth – Smallest/kth –Largest key in priority queue.
+ * 		->	kth ï¿½ Smallest/kth ï¿½ Largest: Returns the kth ï¿½ Smallest/kth ï¿½Largest key in priority queue.
  * 		->	Size: Returns number of elements in priority queue.
  * 		->	Heap Sort: Sorts the elements in the priority queue based on priority (key).
  * 
  * 	Priority Queue Applications
  * 	---------------------------
  * 	->	Data compression: Huffman Coding algorithm
- * 	->	Shortest path algorithms: Dijkstra’s algorithm
- * 	->	Minimum spanning tree algorithms: Prim’s algorithm
+ * 	->	Shortest path algorithms: Dijkstraï¿½s algorithm
+ * 	->	Minimum spanning tree algorithms: Primï¿½s algorithm
  * 	->	Event-driven simulation: customers in a line
  * 	->	Selection problem: Finding kth- smallest element
  * 

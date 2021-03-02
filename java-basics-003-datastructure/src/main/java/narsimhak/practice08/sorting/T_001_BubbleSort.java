@@ -1,4 +1,4 @@
-package practice08.sorting;
+package narsimhak.practice08.sorting;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 	->	Bubble sort is the simplest sorting algorithm. It works by iterating the input array from the first 
  * 		element to the last, comparing each pair of elements and swapping them if needed. Bubble sort continues 
  * 		its iterations until no more swaps are needed. The algorithm gets its name from the way smaller 
- * 		elements “bubble” to the top of the list. 
+ * 		elements ï¿½bubbleï¿½ to the top of the list. 
  * 	->	Generally, insertion sort has better performance than bubble sort. Some researchers suggest that we 
  * 		should not teach bubble sort because of its simplicity and high time complexity.
  * 	->	The only significant advantage that bubble sort has over other implementations is that it can detect 

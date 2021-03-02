@@ -1,4 +1,4 @@
-package practice09.searching;
+package narsimhak.practice09.searching;
 
 /*
  * 	->	Let us assume we are given an array where the order of the elements is not known. That means the

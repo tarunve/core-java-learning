@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	Splay-trees are BSTs with a self-adjusting property. Another interesting property of splay-trees is: 

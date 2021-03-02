@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,8 +6,8 @@ import java.util.Queue;
 /*
  * 	Breadth first Search:
  * 	--------------------
- * 	->	The BFS algorithm works similar to level – order traversal of the trees. Like level – order 
- * 		traversal, BFS also uses queues. In fact, level – order traversal got inspired from BFS. BFS
+ * 	->	The BFS algorithm works similar to level ï¿½ order traversal of the trees. Like level ï¿½ order 
+ * 		traversal, BFS also uses queues. In fact, level ï¿½ order traversal got inspired from BFS. BFS
  * 		works level by level. Initially, BFS starts at a given vertex, which is at level 0. In the 
  * 		first stage it visits all vertices at level 1 (that means, vertices whose distance is 1 from 
  * 		the start vertex of the graph). In the second stage, it visits all vertices at the second level. 

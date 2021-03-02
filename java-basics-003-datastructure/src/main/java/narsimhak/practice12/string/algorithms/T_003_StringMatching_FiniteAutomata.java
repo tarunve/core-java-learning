@@ -1,4 +1,4 @@
-package practice12.string.algorithms;
+package narsimhak.practice12.string.algorithms;
 
 /*
  * 	->	In this method we use the finite automata which is the concept of the Theory of Computation(ToC)

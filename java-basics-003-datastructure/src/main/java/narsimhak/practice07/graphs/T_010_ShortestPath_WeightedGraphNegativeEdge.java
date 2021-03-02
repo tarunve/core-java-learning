@@ -1,12 +1,12 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 /*
  * 	Bellman-Ford Algorithm
  * 	----------------------
- * 	->	If the graph has negative edge costs, then Dijkstra’s algorithm does not work. The problem is that
+ * 	->	If the graph has negative edge costs, then Dijkstraï¿½s algorithm does not work. The problem is that
  * 		once a vertex u is declared known, it is possible that from some other, unknown vertex v there is a
  * 		path back to u that is very negative. In such a case, taking a path from s to v back to u is better
- * 		than going from s to u without using v. A combination of Dijkstra’s algorithm and unweighted
+ * 		than going from s to u without using v. A combination of Dijkstraï¿½s algorithm and unweighted
  * 		algorithms will solve the problem. Initialize the queue with s. Then, at each stage, we DeQueue a	
  * 		vertex v. We find all vertices W adjacent to v such that,
  * 				distance to V + weight(V,W) < old distance to W
@@ -18,8 +18,8 @@ package practice07.graphs;
  * 	Overview of Shortest Path Algorithms
  * 	------------------------------------
  * 	Shortest path in unweighted graph [Modified BFS]						-  	O(|E| + |V|)
- * 	Shortest path in weighted graph [Dijkstra’s] 							-	O(|E| log |V|)
- * 	Shortest path in weighted graph with negative edges [Bellman – Ford] 	-	O(|E|.|V|)
+ * 	Shortest path in weighted graph [Dijkstraï¿½s] 							-	O(|E| log |V|)
+ * 	Shortest path in weighted graph with negative edges [Bellman ï¿½ Ford] 	-	O(|E|.|V|)
  * 	Shortest path in weighted acyclic graph 								-	O(|E| + |V|)	
  */
 public class T_010_ShortestPath_WeightedGraphNegativeEdge {

@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 /*
  * 	->	In earlier sections we have seen that, preorder, inorder, and postorder binary tree traversals used stacks 

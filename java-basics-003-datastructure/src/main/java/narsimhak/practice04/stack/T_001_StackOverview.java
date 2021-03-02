@@ -1,4 +1,4 @@
-package practice04.stack;
+package narsimhak.practice04.stack;
 
 /*
  * 	->	A stack is an ordered list in which insertion and deletion are done at one end, called

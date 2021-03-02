@@ -1,4 +1,4 @@
-package practice09.searching;
+package narsimhak.practice09.searching;
 
 public class Problems_3 {
 	

@@ -1,4 +1,4 @@
-package practice11.hashing;
+package narsimhak.practice11.hashing;
 
 /*
  * 	->	Hashing is a technique used for storing and retrieving information as quickly as possible. It is

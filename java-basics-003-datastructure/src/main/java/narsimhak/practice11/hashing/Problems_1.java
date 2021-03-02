@@ -1,4 +1,4 @@
-package practice11.hashing;
+package narsimhak.practice11.hashing;
 
 @SuppressWarnings("unused")
 public class Problems_1 {

@@ -1,11 +1,11 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 import java.util.Stack;
 
 /*
  * 	->	Graph traversal algorithms are also called graph search algorithms.
  * 	->	graph search algorithms can be thought of as starting at some source vertex in a graph 
- * 		and “searching” the graph by going through the edges and marking the vertices.
+ * 		and ï¿½searchingï¿½ the graph by going through the edges and marking the vertices.
  * 
  * 	Depth First Search:
  * 	------------------
@@ -26,7 +26,7 @@ import java.util.Stack;
  * 	->	The time complexity of DFS is O(V + E), if we use adjacency lists for representing the graphs.
  * 		This is because we are starting at a vertex and processing the adjacent nodes only if they are 
  * 		not visited. Similarly, if an adjacency matrix is used for a graph representation, then all edges
- * 		adjacent to a vertex can’t be found efficiently, and this gives O(V2) complexity.
+ * 		adjacent to a vertex canï¿½t be found efficiently, and this gives O(V2) complexity.
  * 
  * 	Applications of DFS
  * 	-------------------

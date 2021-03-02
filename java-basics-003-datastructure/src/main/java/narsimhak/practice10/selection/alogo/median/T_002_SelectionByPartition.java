@@ -1,4 +1,4 @@
-package practice10.selection.alogo.median;
+package narsimhak.practice10.selection.alogo.median;
 
 /*
  * 	->	This method is similar to Quick Sort.
@@ -6,14 +6,14 @@ package practice10.selection.alogo.median;
  * 	Algorithm
  * 	---------
  * 	1. 	Choose a pivot from the array.
- * 	2. 	Partition the array so that: A[low...pivotpoint – 1] <= pivotpoint <= A[pivotpoint +1..high].
+ * 	2. 	Partition the array so that: A[low...pivotpoint ï¿½ 1] <= pivotpoint <= A[pivotpoint +1..high].
  * 	3. 	if k < pivotpoint then it must be on the left of the pivot, so do the same method recursively on the left part.
  * 	4. 	if k = pivotpoint then it must be the pivot and print all the elements from low to pivotpoint.
  * 	5. 	if k > pivotpoint then it must be on the right of pivot, so do the same method recursively on the right part.
  * 	   	The top-level call would be kthSmallest = Selection(1, n, k).
  * 
  * 	Time Complexity: O(n^2) in worst case as similar to QuickSort. Although the worst case is the same as that of Quicksort, 
- * 	this performs much better on the average [O(nlogk) – Average case].
+ * 	this performs much better on the average [O(nlogk) ï¿½ Average case].
  */
 public class T_002_SelectionByPartition {
 	

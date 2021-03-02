@@ -1,4 +1,4 @@
-package practice11.hashing;
+package narsimhak.practice11.hashing;
 
 /*
  * 	->	The hash function is used to transform the key into the index. Ideally, the hash function should map
@@ -15,21 +15,21 @@ package practice11.hashing;
  * 	How to choose Hash Function:	
  * 	---------------------------
  * 	->	The basic problems associated with the creation of hash tables are:
- * 		• 	An efficient hash function should be designed so that it distributes the index values of inserted objects 
+ * 		ï¿½ 	An efficient hash function should be designed so that it distributes the index values of inserted objects 
  * 			uniformly across the table.
- * 		• 	An efficient collision resolution algorithm should be designed so that it computes an alternative index 
+ * 		ï¿½ 	An efficient collision resolution algorithm should be designed so that it computes an alternative index 
  * 			for a key whose hash index corresponds to a location previously inserted in the hash table.
- * 		• 	We must choose a hash function which can be calculated quickly, returns values within the range of 
+ * 		ï¿½ 	We must choose a hash function which can be calculated quickly, returns values within the range of 
  * 			locations in our table, and minimizes collisions.
  * 
  * 	Characteristics of Good Hash Functions
  * 	--------------------------------------
  * 	->	A good hash function should have the following characteristics:
- * 		•	Minimize collision
- * 		• 	Be easy and quick to compute
- * 		• 	Distribute key values evenly in the hash table
- * 		• 	Use all the information provided in the key
- * 		• 	Have a high load factor for a given set of keys
+ * 		ï¿½	Minimize collision
+ * 		ï¿½ 	Be easy and quick to compute
+ * 		ï¿½ 	Distribute key values evenly in the hash table
+ * 		ï¿½ 	Use all the information provided in the key
+ * 		ï¿½ 	Have a high load factor for a given set of keys
  * 
  * 	Load Factor
  * 	==========

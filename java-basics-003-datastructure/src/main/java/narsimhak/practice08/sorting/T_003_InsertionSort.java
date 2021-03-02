@@ -1,4 +1,4 @@
-package practice08.sorting;
+package narsimhak.practice08.sorting;
 
 import java.util.Arrays;
 

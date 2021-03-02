@@ -1,4 +1,4 @@
-package practice07.graphs;
+package narsimhak.practice07.graphs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,11 +9,11 @@ import java.util.Map;
 
 /*
  * 	->	The algorithm starts with V different trees (V is the vertices in the graph). While constructing the
- * 		minimum spanning tree, every time Kruskal’s algorithm selects an edge that has minimum weight and then 
- * 		adds that edge if it doesn’t create a cycle. So, initially, there are | V | single-node trees in the 
+ * 		minimum spanning tree, every time Kruskalï¿½s algorithm selects an edge that has minimum weight and then 
+ * 		adds that edge if it doesnï¿½t create a cycle. So, initially, there are | V | single-node trees in the 
  * 		forest. Adding an edge merges two trees into one. When the algorithm is completed, there will be only 
  * 		one tree, and that is the minimum spanning tree.
- * 	->	There are two ways of implementing Kruskal’s algorithm:
+ * 	->	There are two ways of implementing Kruskalï¿½s algorithm:
  * 		->	By using Disjoint Sets: Using UNION and FIND operations	
  * 		->	By using Priority Queues: Maintains weights in priority queue
  * 	->	The appropriate data structure is the UNION/FIND algorithm [for implementing forests]. Two vertices 

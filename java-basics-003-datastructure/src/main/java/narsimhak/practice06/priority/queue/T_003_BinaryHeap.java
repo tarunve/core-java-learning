@@ -1,4 +1,4 @@
-package practice06.priority.queue;
+package narsimhak.practice06.priority.queue;
 
 /*
  *	->	In binary heap each node may have up to two children.

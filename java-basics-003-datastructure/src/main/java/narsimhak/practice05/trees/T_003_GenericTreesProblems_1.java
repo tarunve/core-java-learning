@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 
 public class T_003_GenericTreesProblems_1 {
@@ -26,7 +26,7 @@ public class T_003_GenericTreesProblems_1 {
 
 	/*
 	 * Given a parent array P, where P[i] indicates the parent of ith node in the tree
-	 * (assume parent of root node is indicated with –1). Give an algorithm for finding the height
+	 * (assume parent of root node is indicated with ï¿½1). Give an algorithm for finding the height
 	 * or depth of the tree.
 	 * Time Complexity: O(n^2). For skew trees we will be calculating the same values again and again.
 	 * Space Complexity: O(1)

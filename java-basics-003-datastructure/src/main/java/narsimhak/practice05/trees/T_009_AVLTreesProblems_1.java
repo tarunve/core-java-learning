@@ -1,4 +1,4 @@
-package practice05.trees;
+package narsimhak.practice05.trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -46,8 +46,8 @@ public class T_009_AVLTreesProblems_1 {
 	/*
 	 * Given a height h, give an algorithm for generating the HB(0).
 	 * As we have discussed, HB(0) is nothing but generating full binary tree. In full binary tree the number of nodes 
-	 * with height h is: 2h+1 – 1 (let us assume that the height of a tree with one node is 0). As a result the nodes 
-	 * can be numbered as: 1 to 2h+1 – 1.
+	 * with height h is: 2h+1 ï¿½ 1 (let us assume that the height of a tree with one node is 0). As a result the nodes 
+	 * can be numbered as: 1 to 2h+1 ï¿½ 1.
 	 * 
 	 * Time Complexity: O(n). Space Complexity: O(logn), where logn indicates the maximum stack size which is equal 
 	 * to height of the tree.
