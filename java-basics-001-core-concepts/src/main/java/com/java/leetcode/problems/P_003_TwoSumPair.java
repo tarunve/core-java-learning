@@ -13,7 +13,7 @@ import java.util.Map;
  * 		Because nums[0] + nums[1] = 2 + 7 = 9,
  * 		return [0, 1].
  */
-public class P_00001 {
+public class P_003_TwoSumPair {
 	
 	//Brute Force  - O(n^2)
     public static int[] twoSumBruteForce(int[] nums, int target) {

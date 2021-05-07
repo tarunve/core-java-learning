@@ -14,7 +14,7 @@ import java.util.Set;
  * 		Output: 3
  * 		Explanation: The answer is "abc", with the length of 3. 
  */
-public class P_00003 {
+public class P_005_LongestNonRepeatingSubstring {
 	
 	/*	Approach 1: Brute Force - O(n^3)
 	 * 	Complexity Analysis

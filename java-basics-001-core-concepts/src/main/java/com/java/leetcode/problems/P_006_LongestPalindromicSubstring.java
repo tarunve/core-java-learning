@@ -10,7 +10,7 @@ package com.java.leetcode.problems;
  * 		Output: "bab"
  * 		Note: "aba" is also a valid answer.
  */
-public class P_00004 {
+public class P_006_LongestPalindromicSubstring {
 	
 	//Brute Force - O(n^3)   :: Time limit exceeded
 	public static String longestPalindromeBruteForce(String s) {
@@ -31,18 +31,11 @@ public class P_00004 {
         			subStr = s.substring(i, j+1);
         	}
         }
-        if(subStr=="")
+        if(subStr.equals(""))
         	subStr = s.substring(0,1);
         return subStr;
     }
-	
-	//Dynamic Programming - O(n^2)
-	public static String longestPalindromeDP(String s) {
-		
-		return s;
-	}
-	
-	
+
 	public static void main(String[] args) {
 		String str = "tfccfttgbbgt";
 		System.out.println(longestPalindromeBruteForce(str));

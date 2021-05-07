@@ -26,7 +26,7 @@ public class P_002_SunlightBuildingProblem {
 		int num = s.nextInt();
 		while (num > 0) {
 			int n = s.nextInt();
-			int a[] = new int[n];
+			int[] a = new int[n];
 			for (int i = 0; i < n; i++) {
 				a[i] = s.nextInt();
 			}

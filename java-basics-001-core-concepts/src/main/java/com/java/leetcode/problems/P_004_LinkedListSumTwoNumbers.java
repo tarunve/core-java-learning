@@ -16,7 +16,7 @@ package com.java.leetcode.problems;
  * 			respectively, the algorithm above iterates at most max(m,n) times.
  * 		Space complexity : O(max(m,n)). The length of the new list is at most max(m,n)+1.
  */
-public class P_00002 {
+public class P_004_LinkedListSumTwoNumbers {
 	
 	public static class ListNode {
 		int val;
