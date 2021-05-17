@@ -2,6 +2,8 @@ package com.java.enhancements;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.function.Predicate;
 
 public class E_006_StreamsFilterReduce {
@@ -32,5 +34,13 @@ public class E_006_StreamsFilterReduce {
 		//Stream api examples
 		System.out.println(values.stream().filter(i -> i % 5 == 0).map(i -> i * 2).findFirst().orElse(0));
 
+		//reduce example - without identity element
+		List<Integer> l = Arrays.asList(1,1);
+		Optional<Integer> sum = l.stream().reduce((a, b) -> a+b);
+		System.out.println(sum);
+
+		//reduce example - with identity element
+		int sum2 = l.stream().reduce(0, (a,b)->a+b);
+		System.out.println(sum2);
 	}
 }
