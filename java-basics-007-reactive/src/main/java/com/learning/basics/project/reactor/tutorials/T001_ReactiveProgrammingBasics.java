@@ -1,4 +1,4 @@
-package com.learning.tutorials.rxjava;
+package com.learning.basics.project.reactor.tutorials;
 
 /**
  *  Attributes of Reactive Applications:
