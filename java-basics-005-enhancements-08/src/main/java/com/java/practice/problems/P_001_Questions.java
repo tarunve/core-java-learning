@@ -39,8 +39,8 @@ public class P_001_Questions {
 		List<Product> list = Arrays.asList(new Product("Product1", 15.20D), new Product("Product2", 20.00D));
 		list.stream().filter(p -> p.getName().startsWith("Product")).map(Product::getPrice).reduce((a,b)-> a+b).ifPresent(System.out::println);
 		
-		list.stream().filter(p->p.getName().startsWith("Pro"))
-					 .map(Product::getName)
+		list.stream().map(Product::getName)
+					 .filter(name -> name.startsWith("Pro"))
 					 .map(String::toUpperCase)
 					 .distinct()
 					 .limit(2)
