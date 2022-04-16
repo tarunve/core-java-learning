@@ -12,12 +12,9 @@ public class ProblemString_1 {
 	 * How will you find frequency in collection of words.
 	 */
 	private static void findFrequency(List<String> wordList) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
+		Map<String, Integer> map = new HashMap<>();
 		for (String word : wordList) {
-			if (map.get(word) == null)
-				map.put(word, 1);
-			else
-				map.put(word, Integer.valueOf(map.get(word)) + 1);
+			map.merge(word, 1, Integer::sum);
 		}
 		System.out.println(map);
 	}
@@ -25,10 +22,10 @@ public class ProblemString_1 {
 	public static void main(String[] args) {
 		List<String> wordList = Arrays.asList("Ananas", "Mango", "Cherry", "Apple", "Ananas", "Banana", "Mango", "Cherry", "Apple", "Ananas", "Banana", "Mango", "Cherry");
 		findFrequency(wordList);
+		System.out.println("=========================");
 		//java8
 		ConcurrentMap<String, Integer> map = wordList.stream().collect(Collectors.toConcurrentMap(w -> w, w -> 1, Integer::sum));
 		System.out.println(map);
-		System.out.println("=========================");
 	}
 	
 }
