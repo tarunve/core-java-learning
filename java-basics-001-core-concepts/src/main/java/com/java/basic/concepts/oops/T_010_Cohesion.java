@@ -1,7 +1,7 @@
 package com.java.basic.concepts.oops;
 
 /**
- *  High-Cohesion : For every component, If a clear well defined functionality is defined then that component is said to 
+ *  High-Cohesion : For every component, If a clear well-defined functionality is defined then that component is said to
  *  follow high cohesion.
  *  	Ex. Spring Framework , Struts Framework etc.
  *

@@ -29,7 +29,7 @@ package com.java.basic.concepts.string;
  * 	-------
  * 	1.	public int length()
  * 	2.	public int capacity()
- * 		->	how many character StringBuffer object can accomodate.
+ * 		->	how many character StringBuffer object can accommodate.
  * 	3.	public char charAt(int index)
  * 	4.	public void setCharAt(int index, char newChar)
  * 	5.	public StringBuffer append(String str)
