@@ -59,14 +59,14 @@ public class T_014_Constructor_2 {
 	 *
 	 * Whenever we write any arg constructor, it is highly recommended to write no-arg constructor.
 	 */
-	static class ContructorClass5 {
-		ContructorClass5(int i) {}
+	static class ConstructorClass5 {
+		ConstructorClass5(int i) {}
 	}
 	
-	static class ContructorClass6 extends ContructorClass5 {
-		// CE : Implicit super constructor Constructor_14_2.ContructorClass5() is undefined for default constructor. Must define an explicit constructor
+	static class ConstructorClass6 extends ConstructorClass5 {
+		// CE : Implicit super constructor Constructor_14_2.ConstructorClass5() is undefined for default constructor. Must define an explicit constructor
 		//So, we need to write constructor
-		ContructorClass6(int i) {
+		ConstructorClass6(int i) {
 			super(i);
 		}
 	}
@@ -77,15 +77,15 @@ public class T_014_Constructor_2 {
 	 *
 	 * There is no rule for Un-checked exceptions
 	 */
-	static class ContructorClass7 {
-		ContructorClass7() throws IOException {}
-		ContructorClass7(int i) throws NullPointerException, ArithmeticException, ClassCastException {}
+	static class ConstructorClass7 {
+		ConstructorClass7() throws IOException {}
+		ConstructorClass7(int i) throws NullPointerException, ArithmeticException, ClassCastException {}
 	}
 	
-	static class ContructorClass8 extends ContructorClass7 {
-		//ContructorClass8() {} //CE : Un-handled exception type IOException
-		ContructorClass8() throws IOException, Exception, Throwable {}
-		ContructorClass8(int i) {
+	static class ConstructorClass8 extends ConstructorClass7 {
+		//ConstructorClass8() {} //CE : Un-handled exception type IOException
+		ConstructorClass8() throws IOException, Exception, Throwable {}
+		ConstructorClass8(int i) {
 			super(i);
 		}
 	}

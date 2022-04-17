@@ -1,7 +1,7 @@
 package com.java.basic.concepts.oops;
 
 /**s
- * 	We can use Parent reference to hold child objects.
+ * 	We can use Parent references to hold child objects.
  * 		Ex. 	Object o = new String("Test");
  *
  * 	We can use interface to hold child implementation class objects.
