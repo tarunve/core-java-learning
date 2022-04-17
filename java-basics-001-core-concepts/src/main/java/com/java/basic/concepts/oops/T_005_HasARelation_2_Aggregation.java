@@ -8,7 +8,7 @@ package com.java.basic.concepts.oops;
  * 		->	It is a unidirectional association i.e. a one way relationship. For example, department 
  * 			can have students but vice versa is not possible and thus unidirectional in nature.
  * 		->	In Aggregation, both the entries can survive individually which means ending one entity 
- * 			will not effect the other entity
+ * 			will not affect the other entity
  * 	->	Code reuse is best achieved by aggregation.
  */
 import java.util.ArrayList;
