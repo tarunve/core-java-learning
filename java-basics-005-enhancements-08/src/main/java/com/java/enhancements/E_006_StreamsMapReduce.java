@@ -28,7 +28,7 @@ public class E_006_StreamsMapReduce {
 		
 		System.out.println(result);
 		
-		//lamnbda expression 
+		//lambda expression
 		Function<Integer, Integer> f1 = i -> i*2;
 		BinaryOperator<Integer> b1 = (i,j) -> i+j;
 		Stream< Integer> s0 = list.stream();
