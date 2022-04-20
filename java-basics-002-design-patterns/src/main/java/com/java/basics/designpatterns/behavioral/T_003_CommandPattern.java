@@ -164,7 +164,7 @@ public class T_003_CommandPattern {
 			CancelMainDish cancelMain = new CancelMainDish(burger);
 			waiter.execute(cancelMain);
 
-			Dessert dessert = new Dessert("Icecream");
+			Dessert dessert = new Dessert("Ice cream");
 			OrderDessert orderDessert = new OrderDessert(dessert);
 			waiter.execute(orderDessert);
 		}
