@@ -17,7 +17,7 @@ package com.java.basics.designpatterns.structural;
  *
  * 	Drawbacks:
  * 	---------
- * 	1.	Performance may be impacted due to the extra level of indrection.
+ * 	1.	Performance may be impacted due to the extra level of indirection.
  *
  * 	Real World Examples:
  * 	--------------------
@@ -32,21 +32,21 @@ package com.java.basics.designpatterns.structural;
  * 	------------------
  * 	1.	java.lang.reflect.Proxy
  * 	2.	java.rmi.*
- * 	3.	java.ejbb.EJB
- * 	4.	javax.inect.Inject
+ * 	3.	java.ejb.EJB
+ * 	4.	javax.inject.Inject
  */
 public class T_004_ProxyPattern {
 	
 	/*
 	 * Create an interface. Both the real subject and proxy subject will implement this interface.
 	 */
-	public static interface Server {
-		public void authenticate();
-		public void get();
-		public void post();
-		public void put();
-		public void delete();
-		public void logout();
+	public interface Server {
+		void authenticate();
+		void get();
+		void post();
+		void put();
+		void delete();
+		void logout();
 	}
 	
 	/*
@@ -107,7 +107,7 @@ public class T_004_ProxyPattern {
 			if (sessionActive)
 				realServer.get();
 			else
-				System.out.println("Invalid Sesion");
+				System.out.println("Invalid Session");
 		}
 
 		@Override
@@ -115,7 +115,7 @@ public class T_004_ProxyPattern {
 			if (sessionActive)
 				realServer.post();
 			else
-				System.out.println("Invalid Sesion");
+				System.out.println("Invalid Session");
 		}
 
 		@Override
@@ -123,7 +123,7 @@ public class T_004_ProxyPattern {
 			if (sessionActive)
 				realServer.put();
 			else
-				System.out.println("Invalid Sesion");
+				System.out.println("Invalid Session");
 		}
 
 		@Override
@@ -131,7 +131,7 @@ public class T_004_ProxyPattern {
 			if (sessionActive)
 				realServer.delete();
 			else
-				System.out.println("Invalid Sesion");
+				System.out.println("Invalid Session");
 		}
 
 		@Override
