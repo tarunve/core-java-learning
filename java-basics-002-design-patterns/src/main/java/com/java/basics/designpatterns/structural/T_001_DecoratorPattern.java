@@ -2,7 +2,7 @@ package com.java.basics.designpatterns.structural;
 
 /*
  * 	->	Attach additional responsibilities to an object dynamically. Decorators provide a flexible
- * 		alternative to sub-classes for extending functionality.
+ * 		alternative to subclasses for extending functionality.
  *
  * 	When to use:
  * 	-----------
@@ -42,11 +42,11 @@ public class T_001_DecoratorPattern {
 	/*
 	 * Define Item interface and create a Pizza class which is an implementation of Item interface.
 	 */
-	static interface Item {
+	interface Item {
 		void prepare();
 	}
 
-	static class Pizaa implements Item {
+	static class Pizza implements Item {
 		@Override
 		public void prepare() {
 			System.out.print("Pizza");
@@ -86,9 +86,9 @@ public class T_001_DecoratorPattern {
 		}
 	}
 
-	static class DoubleCheeze extends PizzaDecorator {
+	static class DoubleCheese extends PizzaDecorator {
 
-		public DoubleCheeze(Item item) {
+		public DoubleCheese(Item item) {
 			super(item);
 		}
 		
@@ -118,7 +118,7 @@ public class T_001_DecoratorPattern {
 	 */
 	static class DecoratorClient {
 		public static void main(String[] args) {
-			Item[] order = { new DeepFried(new Pizaa()), new DeepFried(new DoubleCheeze(new Pizaa())), new DoubleCheeze(new Spicy(new DeepFried(new Pizaa()))) };
+			Item[] order = { new DeepFried(new Pizza()), new DeepFried(new DoubleCheese(new Pizza())), new DoubleCheese(new Spicy(new DeepFried(new Pizza()))) };
 			for (Item item : order) {
 				item.prepare();
 				System.out.println(" ");
