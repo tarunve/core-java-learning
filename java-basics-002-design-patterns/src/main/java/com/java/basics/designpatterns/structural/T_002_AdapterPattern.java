@@ -138,16 +138,16 @@ public class T_002_AdapterPattern {
 		}
 
 		public void addItem(Item item) {
-			convertXmlToJson(item);
+			convertXmlToJson();
 			newOMS.addToBasket(item);
 		}
 		
 		public void makePayment(Payment payment) {
-			convertXmlToJson(payment);
+			convertXmlToJson();
 			newOMS.pay(payment);
 		}
 		
-		private void convertXmlToJson(Object item) {
+		private void convertXmlToJson() {
 			System.out.println("Converted from XML to JSON");
 		}
 	}

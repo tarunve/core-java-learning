@@ -28,7 +28,7 @@ package com.java.basics.designpatterns.structural;
  * 	Java SDK examples:
  * 	------------------
  * 	1.	javax.faces.context.ExternalContext, which internally uses ServletContext, HttpSession,
- * 		HttpServletresponse, HttpServletReuest etc.
+ * 		HttpServletResponse, HttpServletRequest etc.
  */
 public class T_003_FacadePattern {
 
@@ -82,7 +82,7 @@ public class T_003_FacadePattern {
 	}
 
 	/*
-	 * Client code- Client contacts the facade class to perform the required operation.
+	 * Client code - Client contacts the facade class to perform the required operation.
 	 */
 	public static class FacadeClient {
 
