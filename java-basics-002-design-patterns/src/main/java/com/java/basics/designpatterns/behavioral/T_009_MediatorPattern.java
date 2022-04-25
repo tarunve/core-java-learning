@@ -46,7 +46,7 @@ public class T_009_MediatorPattern {
 		public void registerRunway(Runway runway);
 		public void registerGate(Gate gate);
 		public boolean getLandingPermission(Flight flight);
-		public boolean getTakeofPermission(Flight flight);
+		public boolean getTakeOfPermission(Flight flight);
 		public void enterRunway(Runway runway);
 		public void exitRunway(Runway runway);
 		public void enterGate(Gate gate);
@@ -77,9 +77,9 @@ public class T_009_MediatorPattern {
 		
 		@Override
 		public boolean getLandingPermission(Flight flight) {
-			if (runway.isInUse() == false) {
+			if (!runway.isInUse()) {
 				for (Gate gate : gates) {
-					if (gate.isInUse() == false) {
+					if (!gate.isInUse()) {
 						flight.allocateRunway(runway);
 						flight.allocateGate(gate);
 						return true;
@@ -94,8 +94,8 @@ public class T_009_MediatorPattern {
 		}
 		
 		@Override
-		public boolean getTakeofPermission(Flight flight) {
-			return runway.isInUse() == false;
+		public boolean getTakeOfPermission(Flight flight) {
+			return !runway.isInUse();
 		}
 		
 		@Override
@@ -186,11 +186,11 @@ public class T_009_MediatorPattern {
 		
 		public void landAndTakeOff() throws InterruptedException {
 			System.out.println(flightNum + " is requesting landing permission");
-			while (atc.getLandingPermission(this) == false) {
+			while (!atc.getLandingPermission(this)) {
 				Thread.sleep(1000);
 			}
 			land();
-			while (atc.getTakeofPermission(this) == false) {
+			while (!atc.getTakeOfPermission(this)) {
 				Thread.sleep(1000);
 			}
 			takeOff();

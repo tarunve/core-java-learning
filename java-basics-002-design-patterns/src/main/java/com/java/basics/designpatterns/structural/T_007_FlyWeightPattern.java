@@ -64,7 +64,7 @@ public class T_007_FlyWeightPattern {
 					System.out.println(name + "->out");
 				}
 				
-			}, duration * 1000);
+			}, duration * 1000L);
 			active = true;
 		}
 	}
@@ -97,9 +97,9 @@ public class T_007_FlyWeightPattern {
 	 */
 	public static class FlyWeightClient {
 		static Random r = new Random();
-		private static String[] types = { "bus", "car", "truck" };
-		private static String[] colors = { "red", "green", "blue" };
-		private static int[] speeds = { 50, 30, 80 };
+		private static final String[] types = { "bus", "car", "truck" };
+		private static final String[] colors = { "red", "green", "blue" };
+		private static final int[] speeds = { 50, 30, 80 };
 		
 		public static String getRandType() {
 			return types[r.nextInt(types.length)];
