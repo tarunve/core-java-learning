@@ -36,7 +36,7 @@ public class T_005_BridgePattern {
 	 * Design a color-oriented interface that is minimal, necessary and sufficient. Its goal is to
 	 * decouple the abstraction from the color. Define a derived class of that interface for each color.
 	 */
-	public static interface Color {
+	public interface Color {
 		void applyColor();
 	}
 

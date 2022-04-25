@@ -26,7 +26,7 @@ package com.java.basics.designpatterns.creational;
  * 	--------------------
  * 	1.	Building a house - We need to tell the architect what all we want as part of building.
  * 		The architect then designs and constructs the building. It will be handed over only when
- * 		everything is implemented. We don't get a partially build house(which is unsafe).
+ * 		everything is implemented. We don't get a partial build house(which is unsafe).
  *
  * 	Java SDK Examples
  * 	-----------------
@@ -42,20 +42,11 @@ public class T_005_BuilderPattern {
 		public String wallType;
 		public String roofType;
 		
-		public String getFloorType() {
-			return floorType;
-		}
 		public void setFloorType(String floorType) {
 			this.floorType = floorType;
 		}
-		public String getWallType() {
-			return wallType;
-		}
 		public void setWallType(String wallType) {
 			this.wallType = wallType;
-		}
-		public String getRoofType() {
-			return roofType;
 		}
 		public void setRoofType(String roofType) {
 			this.roofType = roofType;
@@ -63,7 +54,7 @@ public class T_005_BuilderPattern {
 		
 		@Override
 		public String toString() {
-			return new String("Constructing House... \nFloorType : " + floorType + "\nWallType : " + wallType + "\nRoofType : " + roofType);
+			return "Constructing House... \nFloorType : " + floorType + "\nWallType : " + wallType + "\nRoofType : " + roofType;
 		}
 	}
 
@@ -72,11 +63,11 @@ public class T_005_BuilderPattern {
 	 * methods for the step by step construction of the product. It also has a build method for
 	 * retrieving the product object.
 	 */
-	public static interface HouseBuilder {
-		public HouseBuilder buildFloor();
-		public HouseBuilder buildWall();
-		public HouseBuilder buildRoof();
-		public House build();
+	public interface HouseBuilder {
+		HouseBuilder buildFloor();
+		HouseBuilder buildWall();
+		HouseBuilder buildRoof();
+		House build();
 	}
 
 	/*
@@ -152,10 +143,10 @@ public class T_005_BuilderPattern {
 	 * Builder methods. The director class ensures that all the required operations are
 	 * performed before the object is returned to the client in 'consistent' state.
 	 */
-	public static class HouseBuilDirector {
+	public static class HouseBuilderDirector {
 		private final HouseBuilder builder;
 		
-		public HouseBuilDirector(HouseBuilder builder) {
+		public HouseBuilderDirector(HouseBuilder builder) {
 			this.builder = builder;
 		}
 		
@@ -171,12 +162,12 @@ public class T_005_BuilderPattern {
 
 		public static void main(String[] args) {
 			HouseBuilder builder = new ConcreteBuilder();
-			HouseBuilDirector houseBuilDirector = new HouseBuilDirector(builder);
-			System.out.println(houseBuilDirector.construct());
+			HouseBuilderDirector houseBuilderDirector = new HouseBuilderDirector(builder);
+			System.out.println(houseBuilderDirector.construct());
 			
 			builder = new WoodenHouseBuilder();
-			houseBuilDirector = new HouseBuilDirector(builder);
-			System.out.println(houseBuilDirector.construct());
+			houseBuilderDirector = new HouseBuilderDirector(builder);
+			System.out.println(houseBuilderDirector.construct());
 		}
 	}
 }
