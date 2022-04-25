@@ -5,7 +5,7 @@ import java.util.List;
 
 /*
  * 	->	Compose objects into tree structure to represent part-whole hierarchies. Composite
- * 		lets client treats individual objects and composition of objects uniformly.
+ * 		lets' client treats individual objects and composition of objects uniformly.
  *
  * 	When to use:
  * 	-----------
@@ -40,8 +40,8 @@ public class T_006_CompositePattern {
 	/*
 	 * Create a common interface which declares a method to print the item.
 	 */
-	public abstract interface Item {
-		public void print(int level);
+	public interface Item {
+		void print(int level);
 	}
 	
 	/*
@@ -91,9 +91,6 @@ public class T_006_CompositePattern {
 			items.add(item);
 		}
 
-		public void remove(Item item) {
-			items.remove(item);
-		}
 	}
 	
 	/*

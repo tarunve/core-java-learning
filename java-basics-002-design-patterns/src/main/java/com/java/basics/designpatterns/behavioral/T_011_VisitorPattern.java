@@ -162,10 +162,10 @@ public class T_011_VisitorPattern {
 		public static void main(String[] args) {
 			List<Visitable> order = new ArrayList<>();
 			order.add(new FoodItem(1, "Italian Pizza", 6.99));
-			order.add(new LiquorItem(1, "Wine", 9.99));
-			order.add(new LiquorItem(1, "Beer", 5.99));
-			order.add(new FoodItem(1, "Red Apple", 1.49));
-			order.add(new FoodItem(1, "Almonds", 11.99));
+			order.add(new LiquorItem(2, "Wine", 9.99));
+			order.add(new LiquorItem(3, "Beer", 5.99));
+			order.add(new FoodItem(4, "Red Apple", 1.49));
+			order.add(new FoodItem(5, "Almonds", 11.99));
 
 			DiscountVisitor discountVisitor = new DiscountVisitor();
 			TaxVisitor taxVisitor = new TaxVisitor();
