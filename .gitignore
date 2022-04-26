@@ -39,5 +39,9 @@ java-basics-005-enhancements-09/java9-module2/java9-module2.iml
 java-basics-006-xml-parser/target
 java-basics-006-xml-parser/java-basics-006-xml-parser.iml
 
+### Ignoring files for - java-basics-007-reactive ###
+java-basics-007-reactive/target
+java-basics-007-reactive/java-basics-007-reactive.iml
+
 ### xtra-files ###
 xtra-files/xtra-files.iml
