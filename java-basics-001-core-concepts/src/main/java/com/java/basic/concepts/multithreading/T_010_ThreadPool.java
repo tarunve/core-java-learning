@@ -5,13 +5,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * 	Thread Pool or Executer Framework
+ * 	Thread Pool or Executor Framework
  * 	=================================
  * 	->	creating a new thread for every job create performance and memory problems. To overcome this,
  * 		we should use ThreadPool.
  * 	->	It is a pool of already created threads ready to do our job.
  * 	->	Introduced in 1.5 version (ThreadPool)
- * 	->	Also known as executer framework.
+ * 	->	Also known as executor framework.
  * 	-> 	Default ThreadPool size is 60 for most of the servers.
  *
  * 	To create ThreadPool
@@ -22,7 +22,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * 			processing tasks.
  * 		->	If additional tasks are submitted when all threads are active, they will wait in the 
  * 			queue until a thread is available.
- * 		->	If any thread terminates due to a failure during execution prior to shutdown, a new 
+ * 		->	If any thread terminates due to a failure during execution prior to shut down, a new
  * 			one will take its place if needed to execute subsequent tasks.  
  * 		->	The threads in the pool will exist until it is explicitly {@link ExecutorService#shutdown shutdown}.
  * 	2.	ExecutorService service = Executors.newCachedThreadPool();
@@ -39,7 +39,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * 	3.	ExecutorService service = Executors.newSingleThreadExecutor();
  * 		->	Creates an Executor that uses a single worker thread operating off an unbounded queue. 
  * 			(Note however that if this single thread terminates due to a failure during execution 
- * 			prior to shutdown, a new one will take its place if needed to execute subsequent tasks.)  
+ * 			prior to shut down, a new one will take its place if needed to execute subsequent tasks.)
  * 		->	Tasks are guaranteed to execute sequentially, and no more than one task will be active at 
  * 			any given time. Unlike the otherwise equivalent {@code newFixedThreadPool(1)} the returned 
  * 			executor is guaranteed not to be reconfigurable to use additional threads.
