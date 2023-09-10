@@ -36,7 +36,7 @@ public class E_002_ForEach {
 
 		//internal loop in Java 8 
 		// -> lambda expression  , consumer interface
-		list.forEach(i -> System.out.println(i));
+		list.forEach(System.out::println);
 
 		/*Consumer<Integer> c = new Consumer<Integer>() {
 			public void accept(Integer i) {
@@ -44,7 +44,7 @@ public class E_002_ForEach {
 			}
 		};*/
 
-		Consumer<Integer> c = i -> System.out.println(i);
+		Consumer<Integer> c = System.out::println;
 		list.forEach(c);
 		
 		
