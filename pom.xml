@@ -17,6 +17,9 @@
         <module>java-basics-005-enhancements-12</module>
         <module>java-basics-006-xml-parser</module>
         <module>java-basics-007-reactive</module>
+        <module>java-basics-005-enhancements-14</module>
+        <module>java-basics-005-enhancements-15</module>
+        <module>java-basics-005-enhancements-16</module>
     </modules>
 
     <groupId>com.learning</groupId>
