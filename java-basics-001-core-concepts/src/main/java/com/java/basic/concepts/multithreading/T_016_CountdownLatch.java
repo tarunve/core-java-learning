@@ -29,11 +29,6 @@ public class T_016_CountdownLatch {
 
 		@Override
 		public void run() {
-			doWork();
-			countDownLatch.countDown();
-		}
-		
-		private void doWork() {
 			System.out.println("Thread with id " + this.id + " starts working ..."+countDownLatch.getCount());
 			try {
 				Thread.sleep(1000);
@@ -42,6 +37,8 @@ public class T_016_CountdownLatch {
 				e.printStackTrace();
 			}
 			System.out.println("Thread with id " + this.id + " finished");
+			// Count Down for latch
+			countDownLatch.countDown();
 		}
 	}
 	
@@ -52,6 +49,8 @@ public class T_016_CountdownLatch {
 			for (int i = 0; i < 10; i++) {
 				executorService.submit(new Worker(i + 1, countDownLatch));
 			}
+			// Wait until all the dependent calls/threads are completed
+			// i.e. until the latch count becomes 0
 			countDownLatch.await();
 			System.out.println("All the pre-requisites are done...");
 			executorService.shutdown();
