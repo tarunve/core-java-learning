@@ -38,7 +38,7 @@ import java.util.concurrent.BlockingQueue;
  * 		->	Linked queues typically have higher throughput than array-based queues but less predictable 
  * 			performance in most concurrent applications.
  * 
- * 	3.	ProrityBlockingQueue:
+ * 	3.	PriorityBlockingQueue:
  * 		--------------------
  * 		->	An unbounded {@linkplain BlockingQueue blocking queue} that uses the same ordering rules 
  * 			as class {@link PriorityQueue} and supplies blocking retrieval operations.  

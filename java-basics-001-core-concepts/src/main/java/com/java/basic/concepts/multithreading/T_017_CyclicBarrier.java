@@ -24,40 +24,36 @@ import java.util.concurrent.Executors;
  */
 public class T_017_CyclicBarrier {
 
-	static class NewWorker implements Runnable {
+	static class Worker implements Runnable {
 		protected int id;
 		protected CyclicBarrier cyclicBarrier;
 		
-		public NewWorker(int id, CyclicBarrier cyclicBarrier) {
+		public Worker(int id, CyclicBarrier cyclicBarrier) {
 			this.id = id;
 			this.cyclicBarrier = cyclicBarrier;
 		}
 
 		@Override
 		public void run() {
-			doWork();
-		}
-		
-		private void doWork() {
 			System.out.println("Thread with id " + this.id + " starts working ...");
-			try {
-				Thread.sleep(1000);
+			while(true) {
+				try {
+					cyclicBarrier.await();
+				} catch (InterruptedException | BrokenBarrierException e) {
+					e.printStackTrace();
+				}
 			}
-			catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			System.out.println("Thread with id "+this.id + " finished");
+			// Send signal to all the barrier threads at once.
 		}
 	}
 	
 	static class MyTestThread1 {
 		public static void main(String[] args) throws BrokenBarrierException, InterruptedException {
-			ExecutorService executorService = Executors.newSingleThreadExecutor();
-			CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
+			ExecutorService executorService = Executors.newFixedThreadPool(4);
+			CyclicBarrier cyclicBarrier = new CyclicBarrier(3);
 			for (int i = 0; i < 10; i++) {
-				executorService.submit(new NewWorker(i + 1, cyclicBarrier));
+				executorService.submit(new Worker(i + 1, cyclicBarrier));
 			}
-			cyclicBarrier.await();
 			System.out.println("All the pre-requisites are done...");
 			executorService.shutdown();
 		}
