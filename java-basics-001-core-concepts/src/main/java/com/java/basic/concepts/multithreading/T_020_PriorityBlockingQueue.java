@@ -86,7 +86,7 @@ public class T_020_PriorityBlockingQueue {
 		@Override
 		public int compareTo(Person o) {
 			//return name.compareTo(o.getName());
-			return Integer.valueOf(age).compareTo(o.getAge());
+			return Integer.compare(age, o.getAge());
 		}
 
 		public String getName() {
