@@ -15,6 +15,15 @@ package com.java.basics.designpatterns.solid;
  *		5.	D - for Dependency Inversion Principle
  *	->	The five principles overlap here and there, and programmers use them broadly. SOLID principles lead to more flexible 
  *		and stable software architecture that’s easier to maintain and extend, and less likely to break.
+ *
+ *
+ *  Advantages :
+ *  1.  Avoid Duplicate Code
+ *  2.  Easy to maintain
+ *  3.  Easy to Understand
+ *  4.  Flexible Software
+ *  5.  Reduce Complexity
+ *  6.  Extensible Code
  */
 public class T_001_SOLIDOverview {
 
