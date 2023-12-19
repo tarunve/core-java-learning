@@ -15,75 +15,73 @@ package com.java.basics.designpatterns.solid;
 public class T_002_SingleResponsibilityPrinciple {
 
 	/*
-	 * 	Below class is violating the SR principle because it is serving 2 purposes:
-	 * 	1.	Get/Set data.
-	 * 	2.	Search Book
+	 * 	Below class is violating the SR principle because it is serving more than 1 purpose:
+	 * 	1.	Calculate total invoice
+	 * 	2.	Print Invoice
+	 * 	3.	Save Invoice to DB
 	 */
 	static class WithoutSRPrinciple {
-		class Book {
+		static class Invoice {
 
-			String title;
-			String author;
+			private final int price;
+			private final int quantity;
 
-			String getTitle() {
-				return title;
+			Invoice(int price, int quantity){
+				this.price = price;
+				this.quantity = quantity;
 			}
 
-			void setTitle(String title) {
-				this.title = title;
+			public int totalInvoice(){
+				return price*quantity;
 			}
 
-			String getAuthor() {
-				return author;
-			}
+			public void printInvoice() { }
 
-			void setAuthor(String author) {
-				this.author = author;
-			}
-
-			void searchBook() {
-
-			}
+			public void saveInvoice() { }
 		}
 	}
 
 	/*
-	 * In below class, both the purpose are segregating.
+	 * In below class, all the purpose are segregated.
 	 */
 	static class WithSRPrinciple {
-		class Book {
+		static class Invoice {
 
-			String title;
-			String author;
+			private final int price;
+			private final int quantity;
 
-			String getTitle() {
-				return title;
+			Invoice(int price, int quantity) {
+				this.price = price;
+				this.quantity = quantity;
 			}
 
-			void setTitle(String title) {
-				this.title = title;
+			public int totalInvoice() {
+				return price * quantity;
+			}
+		}
+
+		static class InvoicePrinter {
+			Invoice invoice;
+
+			InvoicePrinter(Invoice invoice) {
+				this.invoice = invoice;
 			}
 
-			String getAuthor() {
-				return author;
-			}
-
-			void setAuthor(String author) {
-				this.author = author;
+			void printInvoice() {
+				System.out.println("Print Invoice Implementation");
 			}
 
 		}
 
-		class InventoryView {
+		static class InvoiceDao {
+			Invoice invoice;
 
-			Book book;
-
-			InventoryView(Book book) {
-				this.book = book;
+			InvoiceDao(Invoice invoice) {
+				this.invoice = invoice;
 			}
 
-			void searchBook() {
-
+			void saveInvoice() {
+				System.out.println("Save Invoice Implementation");
 			}
 
 		}
