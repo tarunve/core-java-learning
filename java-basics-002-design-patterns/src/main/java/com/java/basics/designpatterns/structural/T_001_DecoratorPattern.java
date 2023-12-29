@@ -56,6 +56,9 @@ public class T_001_DecoratorPattern {
 	/*
 	 * Create an abstract Decorator class which implements the Item interface. This class contains
 	 * the Item object which will be decorated with new functionalities.
+	 * 	- 	Decorator is having both the relation :
+	 * 		1. 	Has-a relation to Item
+	 * 		2.	Is-a relation to Item
 	 */
 	static abstract class PizzaDecorator implements Item {
 		private final Item item;
