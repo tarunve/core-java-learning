@@ -8,9 +8,10 @@ import java.util.Scanner;
  *
  * 	When to use:
  * 	-----------
- * 	1.	To enforce coding for interface rather than implementation.
- * 	2.	To transfer the responsibility of instantiation from client class to factory method.
- * 	3.	To couple the implementation from client program.
+ * 	1.	We need Factory Pattern when we want to create objects based on some condition.
+ * 	2.	To enforce coding for interface rather than implementation.
+ * 	3.	To transfer the responsibility of instantiation from client class to factory method.
+ * 	4.	To couple the implementation from client program.
  *
  * 	Benefits:
  * 	--------
@@ -44,7 +45,7 @@ public class T_001_FactoryMethodPattern {
 	 * Create an interface. Clients can code for this interface without worrying about the internal
 	 * 	implementation.
 	 */
-	static interface Vehicle {
+	interface Vehicle {
 		void design();
 		void manufacture();
 	}
@@ -54,51 +55,42 @@ public class T_001_FactoryMethodPattern {
 	 * 	in client modules using the "new" operator.
 	 */
 	static class Car implements Vehicle {
-
 		public Car() {}
 
 		@Override
 		public void design() {
 			System.out.println("Designing Car");
 		}
-		
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Car");
 		}
-
 	}
 
 	static class Truck implements Vehicle {
-
 		public Truck() {}
 
 		@Override
 		public void design() {
 			System.out.println("Designing Truck");
 		}
-		
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Truck");
 		}
-
 	}
 	
 	static class MotorCycle implements Vehicle {
-		
 		public MotorCycle() {}
 		
 		@Override
 		public void design() {
 			System.out.println("Designing MotorCycle");
 		}
-		
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing MotorCycle");
 		}
-		
 	}
 
 	/*
@@ -118,7 +110,7 @@ public class T_001_FactoryMethodPattern {
 				case "truck":
 					vehicle = new Truck();
 					break;
-				case "moytorcycle":
+				case "motorcycle":
 					vehicle = new MotorCycle();
 					break;
 				default:
