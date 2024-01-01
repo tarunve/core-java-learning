@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * 	->	Defines a family of algorithms, encapsulate each one, and make them interchangeable. Strategy
+ * 	->	We creates a Strategy Class and its strategies child classes and use this strategy class as
+ * 		a HAS-A relation in the main class (via constructor/method)
+ *  ->	Defines a family of algorithms, encapsulate each one, and make them interchangeable. Strategy
  * 		lets the algorithm vary independently from clients that use it.
  *
  * 	When to use:
@@ -41,7 +43,7 @@ public class T_001_StrategyPattern {
 	 * Define the interface of an interchangeable family of algorithms/
 	 */
 	interface PaymentStrategy {
-		public void pay();
+		void pay();
 	}
 	
 	static class CardPayment implements PaymentStrategy {
