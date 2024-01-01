@@ -49,15 +49,15 @@ public class T_002_AbstractFactoryPattern {
 	/*
 	 * Define interfaces for different type of products/objects.Each family will have all these parts.
 	 */
-	public static interface Engine {
-		public void design();
-		public void manufacture();
-		public void test();
+	public interface Engine {
+		void design();
+		void manufacture();
+		void test();
 	}
 	
-	public static interface Tyre {
-		public void design();
-		public void manufacture();
+	public interface Tyre {
+		void design();
+		void manufacture();
 	}
 	
 	/*
@@ -65,17 +65,14 @@ public class T_002_AbstractFactoryPattern {
 	 * 	to prohibit instantiations in client modules using the new operator.
 	 */
 	public static class CarEngine implements Engine {
-
 		@Override
 		public void design() {
 			System.out.println("Designing Car Engine");
 		}
-
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Car Engine");
 		}
-
 		@Override
 		public void test() {
 			System.out.println("Testing Car Engine");
@@ -83,17 +80,14 @@ public class T_002_AbstractFactoryPattern {
 	}
 	
 	public static class TruckEngine implements Engine {
-
 		@Override
 		public void design() {
 			System.out.println("Designing Truck Engine");
 		}
-
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Truck Engine");
 		}
-
 		@Override
 		public void test() {
 			System.out.println("Testing Truck Engine");
@@ -101,12 +95,10 @@ public class T_002_AbstractFactoryPattern {
 	}
 	
 	public static class CarTyre implements Tyre {
-
 		@Override
 		public void design() {
 			System.out.println("Designing Car Tyre");
 		}
-
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Car Tyre");
@@ -114,12 +106,10 @@ public class T_002_AbstractFactoryPattern {
 	}
 	
 	public static class TruckTyre implements Tyre {
-
 		@Override
 		public void design() {
 			System.out.println("Designing Truck Tyre");
 		}
-
 		@Override
 		public void manufacture() {
 			System.out.println("Manufacturing Truck Tyre");
@@ -142,7 +132,7 @@ public class T_002_AbstractFactoryPattern {
 			if (vehicleType == null) {
 				return null;
 			}
-			Factory factory = null;
+			Factory factory;
 			switch (vehicleType) {
 				case "car":
 					if (carFactory == null)
@@ -165,12 +155,10 @@ public class T_002_AbstractFactoryPattern {
 	 * Factory implementations.
 	 */
 	public static class CarFactory extends Factory {
-
 		@Override
 		public Engine getEngine() {
 			return new CarEngine();
 		}
-
 		@Override
 		public Tyre getTyre() {
 			return new CarTyre();
@@ -178,12 +166,10 @@ public class T_002_AbstractFactoryPattern {
 	}
 	
 	public static class TruckFactory extends Factory {
-
 		@Override
 		public Engine getEngine() {
 			return new TruckEngine();
 		}
-
 		@Override
 		public Tyre getTyre() {
 			return new TruckTyre();
