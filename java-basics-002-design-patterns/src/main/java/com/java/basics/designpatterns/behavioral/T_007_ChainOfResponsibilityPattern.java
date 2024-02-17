@@ -42,8 +42,8 @@ import java.util.Scanner;
  */
 public class T_007_ChainOfResponsibilityPattern {
 	/*
-	 *Create a CashDispener class that will take the denomination as the constructor argument.
-	 *This class has a reference to the next CashDispener.
+	 *	Create a Cash Dispenser class that will take the denomination as the constructor argument.
+	 *	This class has a reference to the next Cash Dispenser.
 	 */
 	public static class CashDispenser {
 		protected int denominator;
@@ -68,10 +68,8 @@ public class T_007_ChainOfResponsibilityPattern {
 				if (balance != 0 && next != null) {
 					next.dispense(balance);
 				}
-			}
-			else {
-				if (next != null)
-					next.dispense(amount);
+			} else if (next != null) {
+				next.dispense(amount);
 			}
 		}
 	}
