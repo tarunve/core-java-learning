@@ -1,5 +1,7 @@
 package com.java.basics.designpatterns.solid;
 
+import lombok.Data;
+
 /**
  * 	->	The Open/Closed Principle is the “O” of SOLID’s five software design principles. It was Bertrand Meyer 
  * 		who coined the term in his book “Object-Oriented Software Construction”. 
@@ -17,56 +19,72 @@ package com.java.basics.designpatterns.solid;
 public class T_003_OpenClosedPrinciple {
 
 	/*
-	 * To add the new feature, we created a new BiographyDiscount class and updated the DiscountManager class
-	 * which violated the OC principle.
+	 * 	To add the new feature, we created a new saveInvoiceToMongoDB() method and updated
+	 * 	the InvoiceDao class which violated the OC principle.
 	 */
-	class WithoutOCPrinciple {
-		class CookbookDiscount {
-			String getCookbookDiscount() {
-				String discount = "30% between Dec 1 and 24.";
-				return discount;
-			}
-		}
+	@Data
+	static class Invoice {
 
-		class DiscountManager {
-			void processCookbookDiscount(CookbookDiscount discount) {}
-			void processBiographyDiscount(BiographyDiscount discount) {}
+		private final int price;
+		private final int quantity;
+
+		Invoice(int price, int quantity) {
+			this.price = price;
+			this.quantity = quantity;
 		}
-		
-		class BiographyDiscount {
-			String getBiographyDiscount() {
-				String discount = "50% on the subject's birthday.";		
-				return discount;
+	}
+
+	static class WithoutOCPrinciple {
+
+		static class InvoiceDao {
+			Invoice invoice;
+
+			InvoiceDao(Invoice invoice) {
+				this.invoice = invoice;
 			}
+
+			void saveInvoiceToFile() {
+				System.out.println("Save Invoice to Local Disk");
+			}
+
+			void saveInvoiceToOracleDB() {
+				System.out.println("Save Invoice to Oracle DB");
+			}
+
+			void saveInvoiceToMongoDB(){ }
 		}
 	}
 	
 	/*
 	 * Using Interface, we can solve this problem.
 	 */
-	interface BookDiscount {
-		String getBookDiscount();
-	}
 
-	class WithOCPrinciple{
-		class CookbookDiscount implements BookDiscount {
+
+	static class WithOCPrinciple{
+
+		interface InvoiceDao {
+			void save(Invoice invoice);
+		}
+
+		static class InvoiceLocalDao implements InvoiceDao {
 			@Override
-			public String getBookDiscount() {
-				String discount = "30% between Dec 1 and 24.";
-				return discount;
+			public void save(Invoice invoice) {
+				System.out.println("Save Invoice to Local Disk");
 			}
 		}
 
-		class BiographyDiscount implements BookDiscount {
+		static class InvoiceOracleDao implements InvoiceDao {
 			@Override
-			public String getBookDiscount() {
-				String discount = "50% on the subject's birthday.";
-				return discount;
+			public void save(Invoice invoice) {
+				System.out.println("Save Invoice to Oracle DB");
 			}
 		}
 		
-		class DiscountManager {
-			void processBookDiscount(BookDiscount discount) {}
+		static class InvoiceMongoDao implements  InvoiceDao {
+			@Override
+			public void save(Invoice invoice) {
+				System.out.println("Save Invoice to Mongo DB");
+			}
 		}
 	}
 }
