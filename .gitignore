@@ -11,8 +11,8 @@ java-basics-002-design-patterns/target
 java-basics-002-design-patterns/java-basics-002-design-patterns.iml
 
 ### Ignoring files for - java-basics-003-datastructure ###
-java-basics-003-datastructure/target
-java-basics-003-datastructure/java-basics-003-datastructure.iml
+java-basics-003-reactive/target
+java-basics-003-reactive/java-basics-003-reactive.iml
 
 ### Ignoring files for - java-basics-004-junit-mockito ###
 java-basics-004-junit-mockito/target
@@ -46,14 +46,6 @@ java-basics-005-enhancements-15/target
 java-basics-005-enhancements-15/java-basics-005-enhancements-15.iml
 java-basics-005-enhancements-16/target
 java-basics-005-enhancements-16/java-basics-005-enhancements-16.iml
-
-### Ignoring files for - java-basics-006-xml-parser ###
-java-basics-006-xml-parser/target
-java-basics-006-xml-parser/java-basics-006-xml-parser.iml
-
-### Ignoring files for - java-basics-007-reactive ###
-java-basics-007-reactive/target
-java-basics-007-reactive/java-basics-007-reactive.iml
 
 ### xtra-files ###
 xtra-files/xtra-files.iml

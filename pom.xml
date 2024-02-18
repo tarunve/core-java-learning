@@ -7,7 +7,7 @@
     <modules>
         <module>java-basics-001-core-concepts</module>
         <module>java-basics-002-design-patterns</module>
-        <module>java-basics-003-datastructure</module>
+        <module>java-basics-003-reactive</module>
         <module>java-basics-004-junit-mockito</module>
         <module>java-basics-005-enhancements-07</module>
         <module>java-basics-005-enhancements-08</module>
@@ -15,8 +15,6 @@
         <module>java-basics-005-enhancements-10</module>
         <module>java-basics-005-enhancements-11</module>
         <module>java-basics-005-enhancements-12</module>
-        <module>java-basics-006-xml-parser</module>
-        <module>java-basics-007-reactive</module>
         <module>java-basics-005-enhancements-14</module>
         <module>java-basics-005-enhancements-15</module>
         <module>java-basics-005-enhancements-16</module>
