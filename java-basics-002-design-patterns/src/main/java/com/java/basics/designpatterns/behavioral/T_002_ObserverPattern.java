@@ -6,6 +6,8 @@ import java.util.List;
 /*
  *	->	Define a one-to-many dependency between objects so that when one object changes state,
  *		all its dependents are notified and updated automatically.
+ * 	->	Whenever there is a state change in Observable, all the observers are notified with the
+ * 		state change.
  *
  * 	When to use:
  * 	-----------
@@ -22,6 +24,7 @@ import java.util.List;
  * 	-------------------
  * 	1.	Auction - The bidders act as observers and raise the paddle to accept the bid. When it is
  * 		accepted, the others are notified by the auctioneer.
+ * 	2.	Notify Me (to all the subscribed users) on the Amazon Website for any product availability.
  *
  * 	Java SDK examples:
  * 	-----------------
@@ -34,23 +37,21 @@ public class T_002_ObserverPattern {
 	 * 	Create a Observer Interface and its concrete implementations.
 	 * 	These Observers subscribe to specific topics(subjects) so that it can display the updates.
 	 */
-	abstract static class Observer {
+	abstract static class NotificationAlertObserver {
 		public abstract void update(String str);
 	}
 
-	static class CustomerDisplay extends Observer {
-		
+	static class MobileNotification extends NotificationAlertObserver {
 		@Override
 		public void update(String str) {
-			System.out.println("[CustomerDisplay] " + str + "\t");
+			System.out.println("[Mobile Notification] " + str + "\t");
 		}
 	}
 
-	static class CashierDisplay extends Observer {
-		
+	static class EmailNotification extends NotificationAlertObserver {
 		@Override
 		public void update(String str) {
-			System.out.print("[CashierDisplay] " + str + "\t");
+			System.out.print("[Email Notification] " + str + "\t");
 		}
 	}
 	
@@ -59,50 +60,63 @@ public class T_002_ObserverPattern {
 	 * 	contain lists to keep track of subscribed observes that need to be notified.
 	 */
 	public interface Topic {
-		void register(Observer obj);
+		void register(NotificationAlertObserver obj);
+		void remove(NotificationAlertObserver obj);
 		void notifyObservers(String str);
 	}
 	
 	static class AddItemTopic implements Topic {
-		private final List<Observer> addItemObservers = new ArrayList<>();
+		private final List<NotificationAlertObserver> addItemNotificationAlertObservers = new ArrayList<>();
 		
 		@Override
-		public void register(Observer observer) {
-			addItemObservers.add(observer);
+		public void register(NotificationAlertObserver notificationAlertObserver) {
+			addItemNotificationAlertObservers.add(notificationAlertObserver);
+		}
+		@Override
+		public void remove(NotificationAlertObserver obj) {
+			addItemNotificationAlertObservers.remove(obj);
 		}
 		@Override
 		public void notifyObservers(String line) {
-			for (Observer o : addItemObservers) {
+			for (NotificationAlertObserver o : addItemNotificationAlertObservers) {
 				o.update(line);
 			}
 		}
 	}
 
 	static class AddPaymentTopic implements Topic {
-		private final List<Observer> addPaymentObservers = new ArrayList<>();
+		private final List<NotificationAlertObserver> addPaymentNotificationAlertObservers = new ArrayList<>();
 		
 		@Override
-		public void register(Observer observer) {
-			addPaymentObservers.add(observer);
+		public void register(NotificationAlertObserver notificationAlertObserver) {
+			addPaymentNotificationAlertObservers.add(notificationAlertObserver);
+		}
+		@Override
+		public void remove(NotificationAlertObserver obj) {
+			addPaymentNotificationAlertObservers.remove(obj);
 		}
 		@Override
 		public void notifyObservers(String line) {
-			for (Observer o : addPaymentObservers) {
+			for (NotificationAlertObserver o : addPaymentNotificationAlertObservers) {
 				o.update(line);
 			}
 		}
 	}
 
 	static class CompleteOrderTopic implements Topic {
-		private final List<Observer> completeOrderObservers = new ArrayList<>();
+		private final List<NotificationAlertObserver> completeOrderNotificationAlertObservers = new ArrayList<>();
 		
 		@Override
-		public void register(Observer observer) {
-			completeOrderObservers.add(observer);
+		public void register(NotificationAlertObserver notificationAlertObserver) {
+			completeOrderNotificationAlertObservers.add(notificationAlertObserver);
+		}
+		@Override
+		public void remove(NotificationAlertObserver obj) {
+			completeOrderNotificationAlertObservers.remove(obj);
 		}
 		@Override
 		public void notifyObservers(String line) {
-			for (Observer o : completeOrderObservers) {
+			for (NotificationAlertObserver o : completeOrderNotificationAlertObservers) {
 				o.update(line);
 			}
 		}
@@ -140,19 +154,19 @@ public class T_002_ObserverPattern {
 		public Topic completeOrderTopic;
 
 		public Order() {
-			Observer cashierDisplay = new CashierDisplay();
-			Observer customerDisplay = new CustomerDisplay();
+			NotificationAlertObserver emailSubscriber = new EmailNotification();
+			NotificationAlertObserver mobileSubscriber = new MobileNotification();
 
 			addItemTopic = new AddItemTopic();
 			addPaymentTopic = new AddPaymentTopic();
 			completeOrderTopic = new CompleteOrderTopic();
 
-			addItemTopic.register(cashierDisplay);
-			addItemTopic.register(customerDisplay);
-			addPaymentTopic.register(cashierDisplay);
-			addPaymentTopic.register(customerDisplay);
-			completeOrderTopic.register(cashierDisplay);
-			completeOrderTopic.register(customerDisplay);
+			addItemTopic.register(emailSubscriber);
+			addItemTopic.register(mobileSubscriber);
+			addPaymentTopic.register(emailSubscriber);
+			addPaymentTopic.register(mobileSubscriber);
+			completeOrderTopic.register(emailSubscriber);
+			completeOrderTopic.register(mobileSubscriber);
 		}
 
 		public void addItem(Item item) {
@@ -189,6 +203,9 @@ public class T_002_ObserverPattern {
 			order.makePayment(new Payment("CREDIT", 10.00));
 			order.makePayment(new Payment("DEBIT", 10.00));
 			System.out.println("--------------------------------------");
+			order.completeOrder();
+			System.out.println("--------------------------------------");
+
 		}
 	}
 }
