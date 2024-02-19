@@ -1,9 +1,8 @@
 package com.practice.junit.mock;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.practice.junit.helper.Dependency;
+import com.practice.junit.helper.SystemUnderTest;
+import com.practice.junit.helper.UtilityClass;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,9 +13,12 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.reflect.Whitebox;
-import com.practice.junit.helper.Dependency;
-import com.practice.junit.helper.SystemUnderTest;
-import com.practice.junit.helper.UtilityClass;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * 	-> 	To Test Private, Static methods and Constructors - We can use PowerMock
@@ -44,7 +46,7 @@ public class T_007_PowerMockTests {
 		// To verify a specific method call
 		// First : Call PowerMockito.verifyStatic()
 		// Second : Call the method to be verified
-		PowerMockito.verifyStatic();
+		PowerMockito.verifyStatic(UtilityClass.class);
 		UtilityClass.staticMethod(1 + 2 + 3);
 		// verify exact number of calls
 		// PowerMockito.verifyStatic(Mockito.times(1));

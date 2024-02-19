@@ -1,37 +1,30 @@
 package com.realworld.example.business.api;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Mockito.stub;
-import static org.mockito.Mockito.verify;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
 import com.realworld.example.business.impl.ClientBOImpl;
 import com.realworld.example.data.api.ClientDO;
 import com.realworld.example.data.api.ProductDO;
 import com.realworld.example.data.impl.ProductDODummyImpl;
-import com.realworld.example.model.api.Amount;
-import com.realworld.example.model.api.Client;
-import com.realworld.example.model.api.ClientType;
-import com.realworld.example.model.api.CollateralType;
-import com.realworld.example.model.api.Currency;
-import com.realworld.example.model.api.Product;
-import com.realworld.example.model.api.ProductType;
+import com.realworld.example.model.api.*;
 import com.realworld.example.model.impl.AmountImpl;
 import com.realworld.example.model.impl.ClientImpl;
 import com.realworld.example.model.impl.CollateralImpl;
 import com.realworld.example.model.impl.ProductImpl;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.*;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ClientBOMockitoTest {
@@ -43,7 +36,7 @@ public class ClientBOMockitoTest {
 	private ClientDO clientDO;
 
 	@InjectMocks
-	private ClientBO clientBO = new ClientBOImpl();
+	private final ClientBO clientBO = new ClientBOImpl();
 
 	@Captor
 	ArgumentCaptor<Client> clientArgumentCaptured;
@@ -53,7 +46,7 @@ public class ClientBOMockitoTest {
 	@Test
 	public void testClientProductSum() {
 		List<Product> products = Arrays.asList(createProductWithAmount("5.0"), createProductWithAmount("6.0"));
-		stub(productDO.getAllProducts(anyInt())).toReturn(products);
+		when(productDO.getAllProducts(anyLong())).thenReturn(products);
 		assertAmountEquals(new AmountImpl(new BigDecimal("11.0"), Currency.EURO), clientBO.getClientProductsSum(DUMMY_CLIENT_ID));
 	}
 
@@ -68,9 +61,7 @@ public class ClientBOMockitoTest {
 
 	@Test
 	public void saveChangedProducts_ProductInScreenAndNotInDatabase_ProductIsInserted() {
-		List<Product> screenProducts = Arrays.asList(createProduct());
-		List<Product> emptyDatabaseProducts = new ArrayList<Product>();
-		stub(productDO.getAllProducts(anyInt())).toReturn(emptyDatabaseProducts);
+		List<Product> screenProducts = Collections.singletonList(createProduct());
 		clientBO.saveChangedProducts(1, screenProducts);
 		verify(productDO).insertProduct(1, screenProducts.get(0));
 	}
@@ -82,9 +73,9 @@ public class ClientBOMockitoTest {
 	@Test
 	public void saveChangedProducts_ProductInScreenAndDatabase_IsUpdated() {
 		Product screenProduct = createProductWithAmount("5.0");
-		List<Product> databaseProducts = Arrays.asList(createProductWithAmount("6.0"));
-		List<Product> screenProducts = Arrays.asList(screenProduct);
-		stub(productDO.getAllProducts(anyInt())).toReturn(databaseProducts);
+		List<Product> databaseProducts = Collections.singletonList(createProductWithAmount("6.0"));
+		List<Product> screenProducts = Collections.singletonList(screenProduct);
+		when(productDO.getAllProducts(anyLong())).thenReturn(databaseProducts);
 		clientBO.saveChangedProducts(1, screenProducts);
 		verify(productDO).updateProduct(1, screenProduct);
 	}
@@ -92,9 +83,9 @@ public class ClientBOMockitoTest {
 	@Test
 	public void saveChangedProducts_ProductInDatabaseButNotInScreen_Deleted() {
 		Product productFromDatabase = createProduct();
-		List<Product> databaseProducts = Arrays.asList(productFromDatabase);
+		List<Product> databaseProducts = Collections.singletonList(productFromDatabase);
 		List<Product> emptyScreenProducts = new ArrayList<Product>();
-		stub(productDO.getAllProducts(anyInt())).toReturn(databaseProducts);
+		when(productDO.getAllProducts(anyLong())).thenReturn(databaseProducts);
 		clientBO.saveChangedProducts(1, emptyScreenProducts);
 		verify(productDO).deleteProduct(1, productFromDatabase);
 	}
@@ -108,16 +99,13 @@ public class ClientBOMockitoTest {
 	}
 
 	private ClientImpl createClientWithProducts(Product... products) {
-		ClientImpl client = new ClientImpl(0, null, null, null, Arrays.asList(products));
-		return client;
+		return new ClientImpl(0, null, null, null, Arrays.asList(products));
 	}
 	
 	@Test
 	public void testProductDOImpl(){
 		ProductDODummyImpl productDODummyImpl = new ProductDODummyImpl();
 		Product product = new ProductImpl(1, "Name", ProductType.BANK_GUARANTEE, new AmountImpl(new BigDecimal(2), Currency.EURO));
-		ProductDODummyImpl mockProductDODummyImpl = Mockito.mock(ProductDODummyImpl.class);
-		Mockito.when(mockProductDODummyImpl.getAllProducts(1)).thenReturn(Arrays.asList(product));
 		Assert.assertNull(productDODummyImpl.insertProduct(1, product));
 		Assert.assertNull(productDODummyImpl.deleteProduct(1, product));
 		Assert.assertNull(productDODummyImpl.updateProduct(1, product));
