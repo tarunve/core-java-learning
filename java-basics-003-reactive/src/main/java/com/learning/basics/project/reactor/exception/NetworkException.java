@@ -10,6 +10,5 @@ public class NetworkException extends RuntimeException {
 
     public NetworkException(Throwable ex) {
         super(ex);
-        this.message = message;
     }
 }
