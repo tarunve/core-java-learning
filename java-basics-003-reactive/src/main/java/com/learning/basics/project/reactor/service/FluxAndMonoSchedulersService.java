@@ -3,11 +3,12 @@ package com.learning.basics.project.reactor.service;
 import com.learning.basics.project.reactor.util.CommonUtil;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import java.util.Arrays;
 import java.util.List;
 
 public class FluxAndMonoSchedulersService {
 
-    private static List<String> namesList = List.of("alex", "ben", "chloe");
+    private static final List<String> namesList = Arrays.asList("alex", "ben", "chloe");
 
     public Flux<String> namesFlux() {
         return Flux.fromIterable(namesList);
