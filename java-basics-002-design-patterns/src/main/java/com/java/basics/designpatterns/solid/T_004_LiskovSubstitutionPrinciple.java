@@ -1,5 +1,7 @@
 package com.java.basics.designpatterns.solid;
 
+import lombok.Data;
+
 /**
  *	->	The Liskov Substitution Principle is the third principle of SOLID, represented by the letter “L”. 
  *		It was Barbara Liskov who introduced the principle in 1987 in her conference keynote talk 
@@ -27,20 +29,21 @@ public class T_004_LiskovSubstitutionPrinciple {
 	 * To add a new delivery functionality AudiobookDelivery to the application, it is realized the it can't be
 	 * delivered to physical locations i.e. overriding getDeliveryMethod is not possible.	
 	 */
-	class WithoutLSPrinciple{
-		class BookDelivery {
+	static class WithoutLSPrinciple{
+		@Data
+		static class BookDelivery {
 			String titles;
 			int userID;
 
 			void getDeliveryLocations() {}
 		}
 		
-		class HardcoverDelivery extends BookDelivery {
+		static class HardcoverDelivery extends BookDelivery {
 			@Override
 			void getDeliveryLocations() {}
 		}
 		
-		class AudiobookDelivery extends BookDelivery {
+		static class AudiobookDelivery extends BookDelivery {
 			@Override
 			void getDeliveryLocations() {/* can't be implemented */}
 		}
@@ -49,26 +52,27 @@ public class T_004_LiskovSubstitutionPrinciple {
 	/*
 	 * we can fix the inheritance hierarchy to solve it as below.
 	 */
-	class WithLSPrinciple{
-		class BookDelivery {
+	static class WithLSPrinciple{
+		@Data
+		static class BookDelivery {
 			String title;
 			int userID;
 		}
 
-		class OfflineDelivery extends BookDelivery {
+		static class OfflineDelivery extends BookDelivery {
 			void getDeliveryLocations() {}
 		}
 
-		class OnlineDelivery extends BookDelivery {
+		static class OnlineDelivery extends BookDelivery {
 			void getSoftwareOptions() {}
 		}
 		
-		class HardcoverDelivery extends OfflineDelivery {
+		static class HardcoverDelivery extends OfflineDelivery {
 			@Override
 			void getDeliveryLocations() {}
 		}
 
-		class AudiobookDelivery extends OnlineDelivery {
+		static class AudiobookDelivery extends OnlineDelivery {
 			@Override
 			void getSoftwareOptions() {}
 		}
