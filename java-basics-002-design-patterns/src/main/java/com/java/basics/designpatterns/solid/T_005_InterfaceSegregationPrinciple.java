@@ -22,31 +22,30 @@ package com.java.basics.designpatterns.solid;
 public class T_005_InterfaceSegregationPrinciple {
 	
 	/*
-	 * IS principle is violated.	
+	 * IS principle is violated since some of the functions are not relevant/applicable to Waiter class.
 	 */
 	static class WithoutISPrinciple{
-		interface BookAction {
-			void seeReviews();
-			void searchSecondhand();
-			void listenSample();
-		}
-		
-		class HardcoverUI implements BookAction {
-			@Override
-			public void seeReviews() {}
-			@Override
-			public void searchSecondhand() {}
-			@Override
-			public void listenSample() {}
+		interface RestaurantEmployee {
+			void washDishes() throws Exception;
+			void serveCustomers();
+			void cookFood() throws Exception;
 		}
 
-		class AudiobookUI implements BookAction {
+		static class Waiter implements RestaurantEmployee {
 			@Override
-			public void seeReviews() {}
+			public void washDishes() throws Exception {
+				throw new Exception("Not my job");
+			}
+
 			@Override
-			public void searchSecondhand() {}
+			public void serveCustomers() {
+				System.out.println("How may I help you, Sir!!!");
+			}
+
 			@Override
-			public void listenSample() {}
+			public void cookFood() throws Exception {
+				throw new Exception("Not my job");
+			}
 		}
 	}
 	
@@ -54,31 +53,39 @@ public class T_005_InterfaceSegregationPrinciple {
 	 * IS principle is not violated
 	 */
 	static class WithISPrinciple{
-		interface BookAction {
-			void seeReviews();
+		interface WaiterInterface {
+			void serveCustomers();
+			void takeOrder();
 		}
 
-		interface HardcoverAction extends BookAction {
-			void searchSecondhand();
+		interface ChefInterface {
+			void cookFood();
+			void decideMenu();
 		}
 
-		interface AudioAction extends BookAction {
-			void listenSample();
-		}
-		
-		class HardcoverUI implements HardcoverAction {
+		static class Waiter implements WaiterInterface {
 			@Override
-			public void seeReviews() {}
+			public void serveCustomers() {
+				System.out.println("How may I help you, Sir!!!");
+			}
+
 			@Override
-			public void searchSecondhand() {}
+			public void takeOrder() {
+				System.out.println("Adding it to order, Sir!!!");
+			}
 		}
 
-		class AudiobookUI implements AudioAction {
-			@Override
-			public void seeReviews() {}
-			@Override
-			public void listenSample() {}
+		static class Chef implements ChefInterface {
 
+			@Override
+			public void cookFood() {
+				System.out.println("Preparing the dish.");
+			}
+
+			@Override
+			public void decideMenu() {
+				System.out.println("Let's add all items to the Menu");
+			}
 		}
 	}
 }
