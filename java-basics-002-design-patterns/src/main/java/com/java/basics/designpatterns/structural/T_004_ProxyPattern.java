@@ -104,34 +104,38 @@ public class T_004_ProxyPattern {
 
 		@Override
 		public void get() {
-			if (sessionActive)
+			if (sessionActive) {
 				realServer.get();
-			else
+			} else {
 				System.out.println("Invalid Session");
+			}
 		}
 
 		@Override
 		public void post() {
-			if (sessionActive)
+			if (sessionActive) {
 				realServer.post();
-			else
+			} else {
 				System.out.println("Invalid Session");
+			}
 		}
 
 		@Override
 		public void put() {
-			if (sessionActive)
+			if (sessionActive) {
 				realServer.put();
-			else
+			} else {
 				System.out.println("Invalid Session");
+			}
 		}
 
 		@Override
 		public void delete() {
-			if (sessionActive)
+			if (sessionActive) {
 				realServer.delete();
-			else
+			} else {
 				System.out.println("Invalid Session");
+			}
 		}
 
 		@Override
