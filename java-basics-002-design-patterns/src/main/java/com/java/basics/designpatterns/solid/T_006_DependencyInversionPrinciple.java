@@ -16,30 +16,27 @@ package com.java.basics.designpatterns.solid;
  *	->	Robert C Martin also mentions that the Dependency Inversion Principle is a specific combination of the 
  *		Open/Closed and Liskov Substitution Principles.
  *	->	The classical use of this principle of bean configuration in Spring framework.
+ *	->	Class should depend on Interface rather than concrete class.
  */	
 public class T_006_DependencyInversionPrinciple {
 
 	/*
-	 * 	If it is asked to add DVDs to their shelves, too. We will need to create new class and modify the existing 
-	 * 	Shelf as well which will  break the DI principle.
+	 * 	If it is asked to change the Wired Devices to Bluetooth Device, we would need to add new classes
+	 * 	for Bluetooth Devices and modify the existing MacBook class which violates the DI principle.
 	 */
-	class WithoutDIPrinciple{
-		class Book {
-			void seeReviews() {}
-			void readSample() {}
-		}
+	static class WithoutDIPrinciple{
+		static class WiredKeyBoard { }
 
-		class Shelf {
-			Book book;
-			DVD dvd;
-			void addBook(Book book) {}
-			void addDVD(DVD dvd) {}
-			void customizeShelf() {}
-		}
-		
-		class DVD {
-			void seeReviews() {}
-			void readSample() {}
+		static class WiredMouse { }
+
+		static class MacBook {
+			WiredKeyBoard keyBoard;
+			WiredMouse mouse;
+
+			MacBook(WiredKeyBoard keyBoard, WiredMouse mouse) {
+				this.keyBoard = keyBoard;
+				this.mouse = mouse;
+			}
 		}
 	}
 	
@@ -47,29 +44,22 @@ public class T_006_DependencyInversionPrinciple {
 	 * Solution to above problem
 	 */
 	static class WithDIPrinciple{
-		interface Product {
-			void seeReviews();
-			void getSample();
-		}
+		interface KeyBoard { }
+		static class WiredKeyBoard implements KeyBoard { }
+		static class BluetoothKeyBoard implements KeyBoard { }
 
-		class Book implements Product {
-			@Override
-			public void seeReviews() {}
-			@Override
-			public void getSample() {}
-		}
+		interface Mouse { }
+		static class WiredMouse implements Mouse { }
+		static class BluetoothMouse implements Mouse { }
 
-		class DVD implements Product {
-			@Override
-			public void seeReviews() {}
-			@Override
-			public void getSample() {}
-		}
-		
-		class Shelf {
-			Product product;
-			void addProduct(Product product) {}
-			void customizeShelf() {}
+		static class MacBook {
+			KeyBoard keyBoard;
+			Mouse mouse;
+
+			MacBook(KeyBoard keyBoard, Mouse mouse) {
+				this.keyBoard = keyBoard;
+				this.mouse = mouse;
+			}
 		}
 	}
 }
