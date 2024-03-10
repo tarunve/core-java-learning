@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * 	Constructors:
  * 	------------
- * 	1.	RenetrantLock l = new ReentrantLock()
+ * 	1.	ReentrantLock l = new ReentrantLock()
  * 		->	creates an instance of ReentrantLock.
  * 	2.	ReentrantLock l = new ReentrantLock(boolean fairness)
  * 		->	creates Reentrant lock with given fairness policy.
