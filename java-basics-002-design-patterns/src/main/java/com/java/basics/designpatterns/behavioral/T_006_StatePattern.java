@@ -1,5 +1,7 @@
 package com.java.basics.designpatterns.behavioral;
 
+import lombok.Data;
+
 /*
  * 	->	Allow an object to alter its behavior when its internal state changes. The object will
  * 		appear to change its class.
@@ -36,9 +38,9 @@ public class T_006_StatePattern {
 	 * as derived classes of the State base class. Define state-specific behavior in appropriate
 	 * State derived classes.
 	 */
-	public static interface AtmState {
-		public void withdraw(int amouont);
-		public void refill(int amount);
+	public interface AtmState {
+		void withdraw(int amount);
+		void refill(int amount);
 	}
 
 	public static class Working implements AtmState {
@@ -79,7 +81,7 @@ public class T_006_StatePattern {
 		}
 		
 		@Override
-		public void withdraw(int amouont) {
+		public void withdraw(int amount) {
 			System.out.println("Out of cash");
 		}
 		
@@ -96,7 +98,8 @@ public class T_006_StatePattern {
 	 * pointer to the current "state" in the "context" class. To change the state of the state
 	 * machine, change the current "state" pointer.
 	 */
-	public static class Atm implements AtmState {
+	@Data
+	public static class Atm {
 
 		int cashStock;
 		AtmState currentState;
@@ -105,28 +108,10 @@ public class T_006_StatePattern {
 			currentState = new NoCash(this);
 		}
 		
-		public int getCashStock() {
-			return cashStock;
+		public void withdraw(int amount) {
+			currentState.withdraw(amount);
 		}
 		
-		public void setCashStock(int cashStock) {
-			this.cashStock = cashStock;
-		}
-		
-		public AtmState getCurrentState() {
-			return currentState;
-		}
-		
-		public void setCurrentState(AtmState currentState) {
-			this.currentState = currentState;
-		}
-		
-		@Override
-		public void withdraw(int amouont) {
-			currentState.withdraw(amouont);
-		}
-		
-		@Override
 		public void refill(int amount) {
 			currentState.refill(amount);
 		}
