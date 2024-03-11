@@ -1,12 +1,12 @@
 package com.java.basic.concepts.oops;
 
 /**
- * In static control flow , if we are creating an object then below steps are executed:
+ * In Instance control flow , if we are creating an object then below steps are executed:
  * 		1. 	Identification of instance members(variables, methods, blocks) from top to bottom.
  * 		2.	Execution of instance variables assignment and instance blocks from top to bottom.
  * 		3. 	Execution of constructor.
  *
- * Static Control flow is one time activity which will be performed at the time of class loading.
+ * Instance Control flow is one time activity which will be performed at the time of class loading.
  * But instance control flow will be performed for every object creation.
  */
 public class T_013_InstanceControlFlow_1 {
