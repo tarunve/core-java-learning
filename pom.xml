@@ -18,6 +18,7 @@
         <module>java-basics-005-enhancements-14</module>
         <module>java-basics-005-enhancements-15</module>
         <module>java-basics-005-enhancements-16</module>
+        <module>java-basics-005-enhancements-17</module>
     </modules>
 
     <groupId>com.learning</groupId>
