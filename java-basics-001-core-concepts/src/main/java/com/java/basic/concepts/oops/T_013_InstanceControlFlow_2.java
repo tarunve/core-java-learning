@@ -1,7 +1,7 @@
 package com.java.basic.concepts.oops;
 
 /**
- * In static control flow , if we are creating an object then below steps are executed (When child object is created):
+ * In Instance control flow , if we are creating an object then below steps are executed (When child object is created):
  * 		1. 	Identification of instance members(variables, methods, blocks) from parent to child.
  * 		2.	Execution of instance variables assignment and instance blocks Only in parent class.
  * 		3. 	Execution of constructor in parent class.
