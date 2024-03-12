@@ -13,12 +13,12 @@ package com.java.enhancements;
  *	->	only one abstract method is allowed in any functional interface.
  *	->	A functional interface is valid even if the @FunctionalInterface annotation would be omitted.
  *	->	Conceptually, a functional interface has exactly one abstract method. Since default methods have an implementation, 
- *		they are not abstract. Since default methods are not abstract you’re free to add default methods to your functional 
+ *		they are not abstract. Since default methods are not abstract youï¿½re free to add default methods to your functional 
  *		interface as many as you like.
  *	->	If an interface declares an abstract method overriding one of the public methods of java.lang.Object, that also does 
- *		not count toward the interface’s abstract method count since any implementation of the interface will have an 
+ *		not count toward the interfaceï¿½s abstract method count since any implementation of the interface will have an 
  *		implementation from java.lang.Object or elsewhere. e.g. Comparator is a functional interface even though it declared 
- *		two abstract methods. Why? Because one of these abstract methods “equals()” which has signature equal to public method 
+ *		two abstract methods. Why? Because one of these abstract methods ï¿½equals()ï¿½ which has signature equal to public method 
  *		in Object class.
  *
  *	What are default methods in java 8?
@@ -51,11 +51,11 @@ package com.java.enhancements;
  *			boolean test(T t);		//Predicate<T>
  *			boolean test(T t, U u);	//BiPredicate<T, U>
  *	-	Function - Represents a function that accepts one argument and produces a result.
- *			R apply(T t);			//Function<T, T>
+ *			R apply(T t);			//Function<T, R>
  *			R apply(T t, U u);		//BiFunction<T, U, R>
  *	-	Supplier -	Represents a supplier of results.
  *			T get();				//Supplier<T>
- *	-	Primitive Function Specializations : Since a primitive type can’t be a generic type argument, there are
+ *	-	Primitive Function Specializations : Since a primitive type canï¿½t be a generic type argument, there are
  *					versions of the Function interface for most used primitive types double, int, long, and their
  *					combinations in argument and return types:
  *		-	IntFunction, LongFunction, DoubleFunction: arguments are of specified type, return type is parameterized
