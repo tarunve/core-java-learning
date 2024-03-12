@@ -57,12 +57,12 @@ public class T_015_SingletonClass {
 	}
 	
 	/*
-	 * Problem with above approaches : Reflection has break the property of singleton
+	 * Problem with above approaches : Reflection can break the property of singleton
 	 */
 	public static class ReflectionDemo {
 	    public static void main(String[] args) throws Exception {
 	        Singleton1 singleton = Singleton1.INSTANCE;
-	        Constructor<? extends Object> constructor = singleton.getClass().getDeclaredConstructor();
+	        Constructor<?> constructor = singleton.getClass().getDeclaredConstructor();
 	        constructor.setAccessible(true);
 	        Singleton1 singleton2 = (Singleton1) constructor.newInstance();
 	        if (singleton == singleton2) {
