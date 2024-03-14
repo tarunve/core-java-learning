@@ -6,7 +6,7 @@ import static java.lang.System.err;
  *	->	Suppressed exceptions, as name suggest, are exceptions thrown in the code but were ignored somehow. If you 
  *		remember try-catch-finally block execution sequence and how they return any value or exceptions, you will 
  *		recall that exceptions thrown in finally block are suppressed if an exception is thrown in try block also.
- *	->	Before java 7, we were informed about these exceptions by logging if implemented, but you didn’t have any 
+ *	->	Before java 7, we were informed about these exceptions by logging if implemented, but you didnï¿½t have any 
  *		control over these types of exceptions once finally block is over. Well, with new features in Java 7, you 
  *		got control over these suppressed exceptions as well.
  *
@@ -159,9 +159,9 @@ public class E_005_SuppressedExceptions {
 				final Throwable[] suppressedExceptions = ex.getSuppressed();
 				final int numSuppressed = suppressedExceptions.length;
 				if (numSuppressed > 0) {
-					err.println("tThere are " + numSuppressed + " suppressed exceptions:");
+					err.println("\tThere are " + numSuppressed + " suppressed exceptions:");
 					for (final Throwable exception : suppressedExceptions) {
-						err.println("tt" + exception.toString());
+						err.println("\t\t" + exception.toString());
 					}
 				}
 			}
