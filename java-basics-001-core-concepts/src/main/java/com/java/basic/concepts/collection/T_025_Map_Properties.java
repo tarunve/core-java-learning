@@ -1,8 +1,7 @@
 package com.java.basic.concepts.collection;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.Objects;
 import java.util.Properties;
 
 /**
@@ -31,17 +30,24 @@ import java.util.Properties;
 public class T_025_Map_Properties {
 	public static void main(String[] args) throws IOException {
 		Properties properties = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\eclipse_workspace\\Phase3\\CRM\\TestPrograms\\src\\test.properties");
-		properties.load(fis);
+		BufferedReader br = new BufferedReader(new FileReader(getResourceFiles("prop.txt")));
+		properties.load(br);
 		System.out.println(properties);
 		
 		String user = properties.getProperty("user");
 		System.out.println(user);
-		properties.setProperty("email", "tarun.verma@amdocs.com");
+		properties.setProperty("email", "tarun@gmail.com");
 		
-		FileOutputStream fos = new FileOutputStream("C:\\eclipse_workspace\\Phase3\\CRM\\TestPrograms\\src\\test.properties");
-		properties.store(fos, "updated by Traun");
+		BufferedWriter bw = new BufferedWriter(new FileWriter(getResourceFiles("prop.txt")));
+		properties.store(bw, "updated by Tarun");
+
+		br.close();
+		bw.close();
 
 		System.out.println(properties);
+	}
+
+	public static String getResourceFiles(String name){
+		return Objects.requireNonNull(T_025_Map_Properties.class.getClassLoader().getResource(name)).getFile();
 	}
 }
