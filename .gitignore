@@ -34,6 +34,8 @@ java-basics-005-enhancements-09/java9-module1/target
 java-basics-005-enhancements-09/java9-module1/java9-module1.iml
 java-basics-005-enhancements-09/java9-module2/target
 java-basics-005-enhancements-09/java9-module2/java9-module2.iml
+java-basics-005-enhancements-09/java9-enhancement/target
+java-basics-005-enhancements-09/java9-enhancement/java9-enhancement.iml
 java-basics-005-enhancements-10/target
 java-basics-005-enhancements-10/java-basics-005-enhancements-10.iml
 java-basics-005-enhancements-11/target
@@ -46,6 +48,8 @@ java-basics-005-enhancements-15/target
 java-basics-005-enhancements-15/java-basics-005-enhancements-15.iml
 java-basics-005-enhancements-16/target
 java-basics-005-enhancements-16/java-basics-005-enhancements-16.iml
+java-basics-005-enhancements-17/target
+java-basics-005-enhancements-17/java-basics-005-enhancements-17.iml
 
 ### xtra-files ###
 xtra-files/xtra-files.iml
