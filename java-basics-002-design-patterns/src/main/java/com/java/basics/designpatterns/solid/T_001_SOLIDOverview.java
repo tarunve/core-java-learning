@@ -14,8 +14,7 @@ package com.java.basics.designpatterns.solid;
  *		4.	I - for Interface Segregation Principle
  *		5.	D - for Dependency Inversion Principle
  *	->	The five principles overlap here and there, and programmers use them broadly. SOLID principles lead to more flexible 
- *		and stable software architecture that’s easier to maintain and extend, and less likely to break.
- *
+ *		and stable software architecture thatâ€™s easier to maintain and extend, and less likely to break.
  *
  *  Advantages :
  *  1.  Avoid Duplicate Code
