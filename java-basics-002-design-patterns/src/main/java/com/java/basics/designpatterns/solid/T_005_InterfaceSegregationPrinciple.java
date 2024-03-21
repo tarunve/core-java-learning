@@ -2,9 +2,9 @@ package com.java.basics.designpatterns.solid;
 
 /**
  *	->	The Interface Segregation Principle is the fourth SOLID design principle represented by the letter 
- *		“I” in the acronym. It was Robert C Martin who first defined the principle by stating that 
- *		“clients should not be forced to depend on methods they don’t use.” By clients, he means classes 
- *		that implement interfaces. In other words, interfaces shouldn’t include too many functionalities.
+ *		â€œIâ€ in the acronym. It was Robert C Martin who first defined the principle by stating that 
+ *		â€œclients should not be forced to depend on methods they donâ€™t use.â€ By clients, he means classes 
+ *		that implement interfaces. In other words, interfaces shouldnâ€™t include too many functionalities.
  *	->	The violation of Interface Segregation Principle harms code readability and forces programmers to 
  *		write dummy methods that do nothing. In a well-designed application, you should avoid interface 
  *		pollution (also called fat interfaces). The solution is to create smaller interfaces that you can 
