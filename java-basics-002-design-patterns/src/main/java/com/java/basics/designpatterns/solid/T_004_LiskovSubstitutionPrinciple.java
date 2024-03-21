@@ -3,14 +3,14 @@ package com.java.basics.designpatterns.solid;
 import lombok.Data;
 
 /**
- *	->	The Liskov Substitution Principle is the third principle of SOLID, represented by the letter “L”. 
+ *	->	The Liskov Substitution Principle is the third principle of SOLID, represented by the letter â€œLâ€. 
  *		It was Barbara Liskov who introduced the principle in 1987 in her conference keynote talk 
- *		“Data Abstraction”. The original phrasing of the Liskov Substitution Principle is a bit complicated, 
+ *		â€œData Abstractionâ€. The original phrasing of the Liskov Substitution Principle is a bit complicated, 
  *		as it asserts that:
- *		->	“In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects 
+ *		->	â€œIn a computer program, if S is a subtype of T, then objects of type T may be replaced with objects 
  *			of type S (i.e., objects of type S may substitute objects of type T) without altering any of the 
- *			desirable properties of that program (correctness, task performed, etc.).”
- *	->	In layman’s terms, it states that an object of a superclass should be replaceable by objects of its 
+ *			desirable properties of that program (correctness, task performed, etc.).â€
+ *	->	In laymanâ€™s terms, it states that an object of a superclass should be replaceable by objects of its 
  *		subclasses without causing issues in the application. So, a child class should never change the 
  *		characteristics of its parent class (such as the argument list and return types). You can implement 	
  *		the Liskov Substitution Principle by paying attention to the correct inheritance hierarchy.
@@ -20,7 +20,7 @@ import lombok.Data;
  *
  *	->	Conclusion from Polymorphism : Object Oriented languages such as Java are very powerful and offer you 
  *			as a developer a tremendous amount of flexibility. You can misuse or abuse any language. In the 
- *		Polymorphism , If you’re writing objects which extend classes, but fails the ‘Is-A’ test, you’re likely 
+ *		Polymorphism , If youâ€™re writing objects which extend classes, but fails the â€˜Is-Aâ€™ test, youâ€™re likely 
  *		violating the Liskov Substitution Principle.
  */
 public class T_004_LiskovSubstitutionPrinciple {
