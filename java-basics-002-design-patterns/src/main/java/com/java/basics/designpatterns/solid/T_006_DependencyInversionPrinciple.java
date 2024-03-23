@@ -1,11 +1,11 @@
 package com.java.basics.designpatterns.solid;
 
 /**
- *	->	The Dependency Inversion Principle is the fifth SOLID design principle represented by the last “D” 
+ *	->	The Dependency Inversion Principle is the fifth SOLID design principle represented by the last â€œDâ€ 
  *		and introduced by Robert C Martin. The goal of the Dependency Inversion Principle is to avoid tightly 
  *		coupled code, as it easily breaks the application. The principle states that:
- *		->	“High-level modules should not depend on low-level modules. Both should depend on abstractions.”
- *			“Abstractions should not depend on details. Details should depend on abstractions.”
+ *		->	â€œHigh-level modules should not depend on low-level modules. Both should depend on abstractions.â€
+ *			â€œAbstractions should not depend on details. Details should depend on abstractions.â€
  *	->	In other words, you need to decouple high-level and low-level classes. High-level classes usually 
  *		encapsulate complex logic while low-level classes include data or utilities. Typically, most people 
  *		would want to make high-level classes depend on low-level classes. However, according to the Dependency 
