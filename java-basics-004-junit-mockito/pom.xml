@@ -12,7 +12,7 @@
 	<version>1.0</version>
 
 	<properties>
-		<spring-core-version>6.0.16</spring-core-version>
+		<spring-core-version>6.1.14</spring-core-version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
