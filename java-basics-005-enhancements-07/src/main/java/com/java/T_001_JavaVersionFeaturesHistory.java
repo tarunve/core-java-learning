@@ -6,7 +6,7 @@ package com.java;
  *
  *	Java 12 Features
  *	================
- *	->	Java 12 (released on March 19, 2019) is latest version available for JDK. Let’s see the new features and improvements, 
+ *	->	Java 12 (released on March 19, 2019) is latest version available for JDK. Letâ€™s see the new features and improvements, 
  *		it brings for developers and architects.
  *		->	Collectors.teeing() in Stream API
  *		->	String API Changes
@@ -17,7 +17,7 @@ package com.java;
  *	
  *	Java 11 Features
  *	================
- *	->	Java 11 (released on September 2018) includes many important and useful updates. Let’s see the new features and improvements, 
+ *	->	Java 11 (released on September 2018) includes many important and useful updates. Letâ€™s see the new features and improvements, 
  *		it brings for developers and architects.
  *		->	HTTP Client API
  *		->	Launch Single-File Programs Without Compilation
@@ -28,7 +28,7 @@ package com.java;
  *	
  *	Java 10 Features
  *	================	
- *	->	After Java 9 release, Java 10 came very quickly. Unlike it’s previous release, Java 10 does not have that many exciting features, 
+ *	->	After Java 9 release, Java 10 came very quickly. Unlike itâ€™s previous release, Java 10 does not have that many exciting features, 
  *		still it has few important updates which will change the way you code, and other future Java versions.
  *		->	JEP 286: Local Variable Type Inference
  *		->	JEP 322: Time-Based Release Versioning
@@ -52,7 +52,7 @@ package com.java;
  *		->	Java platform module system
  *		->	Interface Private Methods
  *		->	HTTP 2 Client
- *		->	JShell – REPL Tool
+ *		->	JShell â€“ REPL Tool
  *		->	Platform and JVM Logging
  *		->	Process API Updates
  *		->	Collection API Updates
@@ -71,7 +71,7 @@ package com.java;
  *		->	Stream API
  *		->	Functional interface and default methods
  *		->	Optionals
- *		->	Nashorn – JavaScript runtime which allows developers to embed JavaScript code within applications
+ *		->	Nashorn â€“ JavaScript runtime which allows developers to embed JavaScript code within applications
  *		->	Annotation on Java Types
  *		->	Unsigned Integer Arithmetic
  *		->	Repeating annotations
@@ -83,7 +83,7 @@ package com.java;
  *	Java SE 7 Features
  *	==================
  *	->	Release Date : July 28, 2011
- *	->	This release was called “Dolphin”. Included features were:
+ *	->	This release was called â€œDolphinâ€. Included features were:
  *		->	JVM support for dynamic languages
  *		->	Compressed 64-bit pointers
  *		->	Strings in switch
@@ -103,7 +103,7 @@ package com.java;
  *	Java SE 6 Features
  *	==================
  *	->	Release Date : December 11, 2006
- *	->	This release was called “Mustang”. Sun dropped the “.0” from the version number and version became Java SE 6. Included features were:
+ *	->	This release was called â€œMustangâ€. Sun dropped the â€œ.0â€ from the version number and version became Java SE 6. Included features were:
  *		->	Scripting Language Support
  *		->	Performance improvements
  *		->	JAX-WS
@@ -116,7 +116,7 @@ package com.java;
  *	J2SE 5.0 Features
  *	=================
  *	->	Release Date : September 30, 2004
- *	->	This release was called “Tiger”. Most of the features, which are asked in java interviews, were added in this release.
+ *	->	This release was called â€œTigerâ€. Most of the features, which are asked in java interviews, were added in this release.
  *	->	Version was also called 5.0 rather than 1.5. Included features are listed down below:
  *		->	Generics
  *		->	Annotations

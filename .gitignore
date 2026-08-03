@@ -1,5 +1,6 @@
 # Project exclude paths
 .idea/
+.vscode
 core-java-learning.iml
 
 ### Ignoring files for - java-basics-001-core-concepts ###

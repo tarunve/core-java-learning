@@ -12,8 +12,8 @@
     <artifactId>java-basics-003-reactive</artifactId>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>26</maven.compiler.source>
+        <maven.compiler.target>26</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -32,11 +32,11 @@
             <artifactId>rxjava</artifactId>
             <version>2.2.21</version>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.13</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>1.5.13</version>-->
+<!--        </dependency>-->
 
         <!-- Testing -->
         <dependency>

@@ -48,11 +48,11 @@ package com.java.basic.concepts.multithreading;
  * 	13.	void destroy()
  * 		->	to destroy thread group and its sub thread groups.
  * 
- * 	What is Thread Group? Why it’s advised not to use it?
+ * 	What is Thread Group? Why itâ€™s advised not to use it?
  * 	=====================================================
  * 	->	ThreadGroup is a class which was intended to provide information about a thread group. ThreadGroup 
- * 		API is weak and it doesn’t have any functionality that is not provided by Thread. It has two main 
- * 		features – to get the list of active threads in a thread group and to set the uncaught exception 
+ * 		API is weak and it doesnâ€™t have any functionality that is not provided by Thread. It has two main 
+ * 		features â€“ to get the list of active threads in a thread group and to set the uncaught exception 
  * 		handler for the thread. 
  * 	->	But Java 1.5 has added setUncaughtExceptionHandler(UncaughtExceptionHandler eh) method using which 
  * 		we can add uncaught exception handler to the thread. So ThreadGroup is obsolete and hence not advised 

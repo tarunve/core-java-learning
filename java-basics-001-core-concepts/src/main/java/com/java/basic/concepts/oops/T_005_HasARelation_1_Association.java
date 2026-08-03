@@ -13,8 +13,8 @@ package com.java.basic.concepts.oops;
  * 	1.	Dependency: Aggregation implies a relationship where the child can exist independently of the 
  * 					parent. For example, Bank and Employee, delete the Bank and the Employee still 
  * 					exist. whereas Composition implies a relationship where the child cannot exist independent of 
- * 					the parent. Example: Human and heart, heart donít exist separate to a Human.
- * 	2.	Type of Relationship: Aggregation relation is ìhas-aî and composition is ìpart-ofî relation.
+ * 					the parent. Example: Human and heart, heart don‚Äôt exist separate to a Human.
+ * 	2.	Type of Relationship: Aggregation relation is ‚Äúhas-a‚Äù and composition is ‚Äúpart-of‚Äù relation.
  * 	3.	Type of association: Composition is a strong Association whereas Aggregation is a weak Association.
  */
 public class T_005_HasARelation_1_Association {

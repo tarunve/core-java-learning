@@ -15,11 +15,11 @@ import java.util.stream.Stream;
  *		which allow us to express common manipulations on stream elements easily and clearly.
  *
  *	->	At the basic level, the difference between Collections and Streams has to do with when things are computed.
- *	->	A Collection is an in-memory data structure, which holds all the values that the data structure currently has—every element 
+ *	->	A Collection is an in-memory data structure, which holds all the values that the data structure currently hasâ€”every element 
  *		in the Collection has to be computed before it can be added to the Collection.
  *	->	A Stream is a conceptually fixed data structure, in which elements are computed on demand. This gives rise to significant 
  *		programming benefits. The idea is that a user will extract only the values they require from a Stream, and these elements 
- *		are only produced—invisibly to the user—as and when required. This is a form of a producer-consumer relationship.
+ *		are only producedâ€”invisibly to the userâ€”as and when required. This is a form of a producer-consumer relationship.
  *	->	In java, java.util.Stream represents a stream on which one or more operations can be performed. Stream operations are either 
  *		intermediate or terminal. While terminal operations return a result of a certain type, intermediate operations return the 
  *		stream itself so you can chain multiple method calls in a row.
@@ -60,7 +60,7 @@ public class E_006_Streams {
 	public static class StreamCreation {
 		public static void main(String[] args) {
 			/*
-			 *  Stream.of(val1, val2, val3….)
+			 *  Stream.of(val1, val2, val3â€¦.)
 			 */
 			Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
 			stream.forEach(p -> System.out.println(p));
@@ -103,7 +103,7 @@ public class E_006_Streams {
 	public static class StreamToCollectionConversion {
 		public static void main(String[] args) {
 			/*
-			 * Stream to List – Stream.collect( Collectors.toList() )
+			 * Stream to List â€“ Stream.collect( Collectors.toList() )
 			 */
 			List<Integer> list = new ArrayList<Integer>();
 			for (int i = 1; i < 10; i++) {
@@ -114,7 +114,7 @@ public class E_006_Streams {
 			System.out.println(evenNumbersList);
 
 			/*
-			 *	Stream to array – Stream.toArray( EntryType[]::new )
+			 *	Stream to array â€“ Stream.toArray( EntryType[]::new )
 			 */
 			List<Integer> list2 = new ArrayList<Integer>();
 			for (int i = 1; i < 10; i++) {

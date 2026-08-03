@@ -3,19 +3,19 @@ package com.java.random;
 /**
  * 	->	Only applicable to integral types.
  *
- * 	Bitwise OR(|) :	This operator is binary operator, denoted by �|�. It returns bit by
+ * 	Bitwise OR(|) :	This operator is binary operator, denoted by â€˜|â€™. It returns bit by
  * 	------------	bit OR of input values, i.e, if either of the bits is 1, it gives 1,
  * 					else it gives 0.
- * 	Bitwise AND(&):	This operator is binary operator, denoted by �&�. It returns bit by
+ * 	Bitwise AND(&):	This operator is binary operator, denoted by â€˜&â€™. It returns bit by
  * 	--------------	bit AND of input values, i.e, if both bits are 1, it gives 1, else
  * 					it gives 0
- * 	Bitwise XOR(^):	This operator is binary operator, denoted by �^�. It returns bit by
+ * 	Bitwise XOR(^):	This operator is binary operator, denoted by â€˜^â€™. It returns bit by
  * 	--------------	bit XOR of input values, i.e, if corresponding bits are different,
  * 					it gives 1, else it gives 0
- * 	Bitwise Complement (~):	This operator is unary operator, denoted by �~�. It returns
- * 	---------------------	the one�s compliment representation of the input value, i.e,
+ * 	Bitwise Complement (~):	This operator is unary operator, denoted by â€˜~â€™. It returns
+ * 	---------------------	the oneâ€™s compliment representation of the input value, i.e,
  * 							with all bits inverse, means it makes every 0 to 1, and every 1 to 0.
- * 	Note � Compiler will give 2�s complement of that number, i.e., 2�s compliment of 10 will be -6.
+ * 	Note â€“ Compiler will give 2â€™s complement of that number, i.e., 2â€™s compliment of 10 will be -6.
  * 	====
  * 	Signed Right shift operator (>>):	Shifts the bits of the number to the right and fills
  * 	-------------------------------		0 on voids left as a result. The leftmost bit depends
@@ -23,12 +23,12 @@ package com.java.random;
  * 										dividing the number with some power of two.
  * 	Unsigned Right shift operator (>>>):	Shifts the bits of the number to the right and fills
  * 	-----------------------------------		0 on voids left as a result. The leftmost bit is set
- * 											to 0. (>>>) is unsigned-shift; it�ll insert 0. (>>)
+ * 											to 0. (>>>) is unsigned-shift; itâ€™ll insert 0. (>>)
  * 											is signed, and will extend the sign bit.
  * 	Left shift operator (<<):	Shifts the bits of the number to the left and fills 0 on voids
  * 	------------------------	right as a result. Similar effect as of multiplying the number
  * 								with some power of two.
- * 	Unsigned Left shift operator (<<<):	Unlike unsigned Right Shift, there is no �<<<" operator
+ * 	Unsigned Left shift operator (<<<):	Unlike unsigned Right Shift, there is no â€œ<<<" operator
  * 	---------------------------------	in Java, because the logical (<<) and arithmetic
  * 										left-shift (<<<) operations are identical.
  */

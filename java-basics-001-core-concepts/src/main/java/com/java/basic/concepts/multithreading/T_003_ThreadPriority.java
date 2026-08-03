@@ -13,12 +13,12 @@ package com.java.basic.concepts.multithreading;
  * 	What is Thread Scheduler and Time Slicing?
  * 	=========================================
  * 	->	Thread Scheduler is the Operating System service that allocates the CPU time to the available 
- * 		runnable threads. Once we create and start a thread, it’s execution depends on the implementation 
+ * 		runnable threads. Once we create and start a thread, itâ€™s execution depends on the implementation 
  * 		of Thread Scheduler. 
  * 	->	Time Slicing is the process to divide the available CPU time to the available runnable threads. 
  * 		Allocation of CPU time to threads can be based on thread priority or the thread waiting for longer 
- * 		time will get more priority in getting CPU time. Thread scheduling can’t be controlled by java, so 
- * 		it’s always better to control it from application itself.
+ * 		time will get more priority in getting CPU time. Thread scheduling canâ€™t be controlled by java, so 
+ * 		itâ€™s always better to control it from application itself.
  * 
  * 	What is context-switching in multi-threading?
  * 	============================================

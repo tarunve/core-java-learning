@@ -151,7 +151,7 @@ public class E_005_DateTimeAPI {
 		/*
 		 * Creating date objects
 		 * ->	Creating date objects now can be done using builder pattern also. The builder pattern allows the object 
-		 * 		you want to be built up using individual parts. This is achieved using the methods prefixed by “at”.
+		 * 		you want to be built up using individual parts. This is achieved using the methods prefixed by â€œatâ€.
 		 */
 		//Builder pattern used to make date object
 		System.out.println("==================Builder pattern================");
@@ -183,7 +183,7 @@ public class E_005_DateTimeAPI {
 		/*
 		 * Timezone Changes
 		 * ->	Timezone related handling is done by 3 major classes. These are ZoneOffset, TimeZone, ZoneRules.
-		 * ->	The ZoneOffset class represents a fixed offset from UTC in seconds. This is normally represented as a string of the format “±hh:mm”.
+		 * ->	The ZoneOffset class represents a fixed offset from UTC in seconds. This is normally represented as a string of the format â€œÂ±hh:mmâ€.
 		 * ->	The TimeZone class represents the identifier for a region where specified time zone rules are defined.
 		 * ->	The ZoneRules are the actual set of rules that define when the zone-offset changes.
 		 */

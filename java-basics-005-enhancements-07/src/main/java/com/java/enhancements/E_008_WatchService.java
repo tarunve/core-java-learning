@@ -16,7 +16,7 @@ import java.util.Properties;
 /**
  *	Java WatchService to Auto Reload Properties
  *	===========================================
- *	->	Automatically refresh the configuration files whenever any change happens in those files – It is a very common problem 
+ *	->	Automatically refresh the configuration files whenever any change happens in those files â€“ It is a very common problem 
  *		seen in the most application.
  *	->	Every application has some configuration which is expected to be refreshed on every change in the configuration file. 
  *	->	Past approaches to solve this problem had consisted of having a Thread, which periodically poll for file change based 
@@ -95,7 +95,7 @@ public class E_008_WatchService {
 	}
 
 	/*
-	 * 	Configuration Change Listener – File Watcher
+	 * 	Configuration Change Listener â€“ File Watcher
 	 * 		Now when we have our basic wrapper for our in-memory cache of configuration properties, we need a mechanism to 
 	 * 		reload this cache on runtime, whenever configuration file stored in file system changes.
 	 */

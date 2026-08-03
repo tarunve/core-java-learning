@@ -5,7 +5,7 @@ package com.java.enhancements;
  *	==============================
  *	->	In this feature, now you can catch multiple exceptions in single catch block. Before Java 7, it was 
  *		restricted to catch only one exception per catch block.
- *	->	To specify the list of expected exceptions a pipe (‘|’) character is used.
+ *	->	To specify the list of expected exceptions a pipe (â€˜|â€™) character is used.
  *
  *	Redundant throws clause in Java 7
  *	================================

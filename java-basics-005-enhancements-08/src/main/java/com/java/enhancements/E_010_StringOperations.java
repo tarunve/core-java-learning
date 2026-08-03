@@ -24,7 +24,7 @@ public class E_010_StringOperations {
 
 		public static void main(String[] args) {
 			/*
-			 * Join String Array – Java 8 String.join()
+			 * Join String Array â€“ Java 8 String.join()
 			 */
 			String joinedString = String.join(", ", "How", "To", "Do", "In", "Java");
 			System.out.println(joinedString);

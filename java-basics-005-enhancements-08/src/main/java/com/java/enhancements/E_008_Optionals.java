@@ -6,8 +6,8 @@ import java.util.Optional;
  * 	What is the Type of Null
  * 	========================
  * 	->	The use of null is so common that we rarely put more thoughts on it. For example, field members of objects are automatically 
- * 		initialized to null and programmers typically initialize reference types to null when they don’t have an initial value to 
- * 		give them and, in general, null is used everytime where we don’t know or we don’t have a value to give to a reference.
+ * 		initialized to null and programmers typically initialize reference types to null when they donâ€™t have an initial value to 
+ * 		give them and, in general, null is used everytime where we donâ€™t know or we donâ€™t have a value to give to a reference.
  * 	->	In Java null is actually a type, a special one. It has no name so we cannot declare variables of its type or cast any 
  * 		variables to it; in fact there is only a single value that can be associated with it (i.e. the literal null). Remember that 
  * 		unlike any other types in Java, a null reference can be safely assigned to any other reference types without any error.
@@ -16,19 +16,19 @@ import java.util.Optional;
  * 	======================================
  * 	->	null is a problem in most of the cases and we get NPE.
  * 	->	A good solution is to always initialize your object references with some value, and never with null. In this way, you will 
- * 		never encounter NullPointerException. Fair enough. But in practical we always don’t have a default value for a reference. 
+ * 		never encounter NullPointerException. Fair enough. But in practical we always donâ€™t have a default value for a reference. 
  * 		So, how those cases should be handled?   ---> Java 8 Optionals
  * 
  * 	How Java 8 Optionals provide the solution?		
  * 	==========================================
  * 	->	Optional is a way of replacing a nullable T reference with a non-null value. An Optional may either contain a non-null T 
- * 		reference (in which case we say the reference is “present”), or it may contain nothing.
- * 	->	Remember that it is never said that optional “contain null”.	
- * 	->	You can also view Optional as a single-value container that either contains a value or doesn’t.
+ * 		reference (in which case we say the reference is â€œpresentâ€), or it may contain nothing.
+ * 	->	Remember that it is never said that optional â€œcontain nullâ€.	
+ * 	->	You can also view Optional as a single-value container that either contains a value or doesnâ€™t.
  * 
  * 	What is inside Optional make it work?
  * 	====================================
- * 	->	When you create an Optional then below call happen at end and assign the passed value to ‘value’ attribute.
+ * 	->	When you create an Optional then below call happen at end and assign the passed value to â€˜valueâ€™ attribute.
  * 			this.value = Objects.requireNonNull(value);
  * 	->	When you try to get a value from an Optional, value is fetched if present other wise NoSuchElementException is thrown.
  * 
@@ -60,7 +60,7 @@ public class E_008_Optionals {
 		
 		/*
 		 * Use Optional.ofNullable() to create an Optional object that may hold a null value. If parameter is null, the resulting 
-		 * Optional object would be empty (remember that value is absent; don’t read it null).
+		 * Optional object would be empty (remember that value is absent; donâ€™t read it null).
 		 */
 		Optional<Integer> possible3 = Optional.ofNullable(null);
 		System.out.println(possible3);

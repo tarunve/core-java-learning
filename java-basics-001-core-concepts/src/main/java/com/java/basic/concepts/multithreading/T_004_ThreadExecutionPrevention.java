@@ -42,7 +42,7 @@ package com.java.basic.concepts.multithreading;
  * 	Why Thread sleep() and yield() methods are static?
  * 	=================================================
  * 	->	Thread sleep() and yield() methods work on the currently executing thread. So there is no point in invoking 
- * 		these methods on some other threads that are in wait state. That’s why these methods are made static so that 
+ * 		these methods on some other threads that are in wait state. Thatâ€™s why these methods are made static so that 
  * 		when this method is called statically, it works on the current executing thread and avoid confusion to the 
  * 		programmers who might think that they can invoke these methods on some non-running threads.
  */

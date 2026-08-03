@@ -25,7 +25,7 @@ import java.util.stream.IntStream;
 public class E_003_MethodReference {
 	public static void main(String[] args) {
 		/*
-		 * Method reference to static method – Class::staticMethodName
+		 * Method reference to static method â€“ Class::staticMethodName
 		 */
 		List<Integer> integers = Arrays.asList(1,12,433,5);
 		Optional<Integer> max = integers.stream().reduce( Math::max ); 
@@ -34,7 +34,7 @@ public class E_003_MethodReference {
 		integers.stream().reduce( Math::max ).ifPresent(value -> System.out.println(value));
 		
 		/*
-		 * Method reference to instance method from instance – ClassInstance::instanceMethodName
+		 * Method reference to instance method from instance â€“ ClassInstance::instanceMethodName
 		 */
 		List<Integer> integers2 = Arrays.asList(1,12,433,5);
 		Optional<Integer> max2 = integers2.stream().reduce( Math::max );
@@ -45,7 +45,7 @@ public class E_003_MethodReference {
 		integers2.stream().reduce((a,b) -> (a>b) ? a : b).ifPresent(System.out::println);
 
 		/*
-		 * Method reference to instance method from class type – Class::instanceMethodName
+		 * Method reference to instance method from class type â€“ Class::instanceMethodName
 		 */
 		List<String> strings = Arrays.asList("how", "to", "do", "in", "java", "dot", "com");		 
 		List<String> sorted = strings.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList());
@@ -54,7 +54,7 @@ public class E_003_MethodReference {
 		System.out.println(sortedAlt);
 		
 		/*
-		 * Reference to constructor – Class::new
+		 * Reference to constructor â€“ Class::new
 		 */
 		List<Integer> integers3 = IntStream.range(1, 100).boxed().collect(Collectors.toCollection( ArrayList::new ));
 		System.out.println(integers3);

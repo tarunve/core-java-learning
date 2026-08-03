@@ -89,7 +89,7 @@ public class E_011_Comparator {
 		System.out.println(employees);
 
 		/*
-		 * Sort by first name – ‘reverse order’
+		 * Sort by first name â€“ â€˜reverse orderâ€™
 		 */
 		List<Employee> employeesList = getEmployees();
 		Comparator<Employee> comparator = Comparator.comparing(e -> e.getFirstName());
@@ -97,7 +97,7 @@ public class E_011_Comparator {
 		System.out.println(employeesList);
 
 		/*
-		 * Sort on multiple fields – thenComparing()
+		 * Sort on multiple fields â€“ thenComparing()
 		 */
 		List<Employee> empList = getEmployees();
 		Comparator<Employee> groupByComparator = Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getLastName);

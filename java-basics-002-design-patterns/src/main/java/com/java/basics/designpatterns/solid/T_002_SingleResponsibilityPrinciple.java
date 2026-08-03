@@ -2,7 +2,7 @@ package com.java.basics.designpatterns.solid;
 
 /**
  * 	->	The Single Responsibility Principle is the first SOLID design principle, represented by the 
- * 		letter “S” and defined by Robert C Martin. It states that in a well-designed application, each 
+ * 		letter â€œSâ€ and defined by Robert C Martin. It states that in a well-designed application, each 
  * 		class (microservice, code module) should have only one single responsibility. Responsibility 
  * 		is used in the sense of having only one reason to change.
  * 	->	When a class handles more than one responsibility, any changes made to the functionalities might 

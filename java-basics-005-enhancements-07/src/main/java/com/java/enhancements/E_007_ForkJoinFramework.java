@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * 		frameworks that would distribute the work across multiple cores and then join them to return the result set. 
  * 		Java 7 has incorporated this feature as a Fork and Join framework.
  * 	->	Basically the Fork-Join breaks the task at hand into mini-tasks until the mini-task is simple enough that it 
- * 		can be solved without further breakups. It’s like a divide-and-conquer algorithm.
+ * 		can be solved without further breakups. Itâ€™s like a divide-and-conquer algorithm.
  * 	->	One important concept to note in this framework is that ideally no worker thread is idle. They implement a 
  * 		work-stealing algorithm in that idle workers steal the work from those workers who are busy.
  * 

@@ -15,7 +15,7 @@ import java.util.Scanner;
  *  3.  it should allow use of more symbols except O , X
  *  4.  Player Can get Rating on basis of Win | Draw . Maybe we can also reduce rating if Player loses
  *  5.  Undo a Change should be allowed ?
- *  6.  Timer to do a move ? Maybe Penalty in rating if timer exceeds as we can’t skip the chance
+ *  6.  Timer to do a move ? Maybe Penalty in rating if timer exceeds as we canâ€™t skip the chance
  *      as it would defy the purpose for the game . although if we have a large board say 20 * 20
  *      then we can see if player chance should be skipped and other player might get a extra advantage.
  *  7.  Toss to Choose the Symbol

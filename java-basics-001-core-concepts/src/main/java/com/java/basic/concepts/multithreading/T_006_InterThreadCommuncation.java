@@ -38,7 +38,7 @@ import java.util.List;
  * 	=====================================================================================
  * 	->	In Java every Object has a monitor and wait, notify methods are used to wait for the Object 
  * 		monitor or to notify other threads that Object monitor is free now. There is no monitor on 
- * 		threads in java and synchronization can be used with any Object, that’s why it’s part of Object 
+ * 		threads in java and synchronization can be used with any Object, thatâ€™s why itâ€™s part of Object 
  * 		class so that every class in java has these essential methods for inter-thread communication.
  * 	
  * 	Why wait(), notify() and notifyAll() methods have to be called from synchronized method or block?

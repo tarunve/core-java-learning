@@ -14,7 +14,7 @@ import java.io.IOException;
  *			void close() throws Exception;
  *	->	Java docs recommend this interface to be implemented on any resource that must be closed when it is no longer needed.
  *	->	When we open any such AutoCloseable resource in special try-with-resource block, immediately after finishing the try 
- *		block, JVM calls this close() method on all resources initialized in “try()” block.
+ *		block, JVM calls this close() method on all resources initialized in â€œtry()â€ block.
  *	->	For example, BufferedReader has implemented close() method file this:
  *			public void close() throws IOException {
  *			    synchronized (lock) {

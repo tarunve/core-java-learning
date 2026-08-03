@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *	Before generics – raw type declarations
+ *	Before generics â€“ raw type declarations
  *	=======================================
  *	->	If you have worked on early versions on Java (before 1.5), when generics were not a Java feature, developers have to use 
  *		raw types declarations and initializations. For example, given below is a HashMap declarations.
@@ -13,7 +13,7 @@ import java.util.List;
  *		if object is not of desired type. There is no compile time safety which can warn developers, that which types are allowed 
  *		and which are not.
  *
- *	Generics – parameterized types
+ *	Generics â€“ parameterized types
  *	==============================
  *	->	JDK 1.5 brought generics. It must much needed feature and completely changed the way developers write the code. It enabled 
  *		compile time safety. It helped in reducing runtime errors by great number.

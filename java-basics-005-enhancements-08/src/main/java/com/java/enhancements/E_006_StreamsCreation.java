@@ -6,9 +6,7 @@ import lombok.ToString;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
@@ -42,9 +40,10 @@ public class E_006_StreamsCreation {
 
     private static void streamFromTextFile() {
         try {
-            Stream<String> lines = Files.lines(Paths.get("abc.txt"));
-            long count = lines.count();
-            System.out.println("count of lines : " + count);
+            try (Stream<String> lines = Files.lines(Paths.get("abc.txt"))) {
+                long count = lines.count();
+                System.out.println("count of lines : " + count);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
